@@ -81,7 +81,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://skyurb.cn/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -115,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://skyurb.cn/"/>
 
 
 
@@ -131,6 +131,7 @@
 
 
 
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/13/链表的java实现/">
+    <link itemprop="mainEntityOfPage" href="http://skyurb.cn/2018/07/13/链表的java实现/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="skyurb">
@@ -330,55 +331,64 @@
       
         
           
-            <p>创建节点<br>public class Node {<br>    //存放数据<br>    private int date;<br>    //指向下一个节点个引用<br>    private Node next;</p>
-<pre><code>public int getDate() {
-    return date;
-}
+            <pre><code>public class Node {
 
-public void setDate(int date) {
-    this.date = date;
-}
+    private int date;
+    //指向下一个节点个引用
+    private Node next;
 
-public Node getNext() {
-    return next;
-}
-
-public void setNext(Node next) {
-    this.next = next;
-}
-</code></pre><p>}</p>
-<p>public class MyLinkList {</p>
-<pre><code>private Node head=new Node();
-private Node tail=head;
-//定义存放数据方法
-public void add(int num){
-    //创建一个节点，将数据填充到节点，将尾部节点指向新创建的节点
-    Node node=new Node();
-    //将数据填充节点
-    node.setDate(num);
-    //然后将
-   // Node next=tail.getNext();
-   tail.setNext(node);
-    tail=node;
-}
-//定义get方法
-public int get(int index){
-    Node target=head;
-    for (int i = 0; i &lt; index+1; i++) {
-        target=target.getNext();
+    public int getDate() {
+        return date;
     }
-    return target.getDate();
-}
 
-public static void main(String[] args) {
-    MyLinkList myLinkList = new MyLinkList();
-    for (int i = 0; i &lt; 100; i++) {
-        myLinkList.add(i);
+    public void setDate(int date) {
+        this.date = date;
     }
-    System.out.println(myLinkList.get(1));
-}
-</code></pre><p>}</p>
 
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+}
+
+
+
+
+public class MyLinkList {
+    private Node head=new Node();
+    private Node tail=head;
+    //定义存放数据方法
+    public void add(int num){
+        //创建一个节点，将数据填充到节点，将尾部节点指向新创建的节点
+        Node node=new Node();
+        //将数据填充节点
+        node.setDate(num);
+        //然后将
+    // Node next=tail.getNext();
+    tail.setNext(node);
+        tail=node;
+    }
+    //定义get方法
+    public int get(int index){
+        Node target=head;
+        for (int i = 0; i &lt; index+1; i++) {
+            target=target.getNext();
+        }
+        return target.getDate();
+    }
+
+    public static void main(String[] args) {
+        MyLinkList myLinkList = new MyLinkList();
+        for (int i = 0; i &lt; 100; i++) {
+            myLinkList.add(i);
+        }
+        System.out.println(myLinkList.get(1));
+    }
+}
+</code></pre>
           
         
       
@@ -482,6 +492,34 @@ public static void main(String[] args) {
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/skyurb" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:skyurber@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/yourname" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yourname" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
           
 
           
