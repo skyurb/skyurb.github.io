@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="public class Node {      private int date;     //指向下一个节点个引用     private Node next;      public int getDate() {         return date;     }      public void setDate(int date) {         this.date = date;">
+<meta name="description" content="创建一个节点和一个对象 节点包含两个属性：数据，和指向连接对象实现添加和查询方法">
 <meta name="keywords" content="java,链表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="链表的java实现">
 <meta property="og:url" content="http://skyurb.cn/2018/07/13/链表的java实现/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="public class Node {      private int date;     //指向下一个节点个引用     private Node next;      public int getDate() {         return date;     }      public void setDate(int date) {         this.date = date;">
+<meta property="og:description" content="创建一个节点和一个对象 节点包含两个属性：数据，和指向连接对象实现添加和查询方法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-14T03:09:57.155Z">
+<meta property="og:updated_time" content="2018-07-14T09:00:40.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="链表的java实现">
-<meta name="twitter:description" content="public class Node {      private int date;     //指向下一个节点个引用     private Node next;      public int getDate() {         return date;     }      public void setDate(int date) {         this.date = date;">
+<meta name="twitter:description" content="创建一个节点和一个对象 节点包含两个属性：数据，和指向连接对象实现添加和查询方法">
 
 
 
@@ -382,10 +382,15 @@
       
 
       
-        <pre><code>public class Node {
+        <h2 id="创建一个节点和一个对象"><a href="#创建一个节点和一个对象" class="headerlink" title="创建一个节点和一个对象"></a>创建一个节点和一个对象</h2><blockquote>
+<p>节点包含两个属性：数据，和指向连接<br>对象实现添加和查询方法</p>
+</blockquote>
+<a id="more"></a>
+<p>###创建节点</p>
+<pre><code>public class Node {
 
     private int date;
-    //指向下一个节点个引用
+
     private Node next;
 
     public int getDate() {
@@ -404,11 +409,8 @@
         this.next = next;
     }
 }
-
-
-
-
-public class MyLinkList {
+</code></pre><p>###创建对象</p>
+<pre><code>public class MyLinkList {
     private Node head=new Node();
     private Node tail=head;
     //定义存放数据方法
@@ -544,8 +546,17 @@ public class MyLinkList {
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -675,6 +686,22 @@ public class MyLinkList {
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个节点和一个对象"><span class="nav-number">1.</span> <span class="nav-text">创建一个节点和一个对象</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -718,7 +745,7 @@ public class MyLinkList {
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.0k字</span>
+  <span class="post-count">博客全站共1.1k字</span>
 </div>
 
 

@@ -381,8 +381,7 @@
 
       
         
-          
-            <h1 id="单例模式概述"><a href="#单例模式概述" class="headerlink" title="单例模式概述"></a>单例模式概述</h1><blockquote>
+          <h1 id="单例模式概述"><a href="#单例模式概述" class="headerlink" title="单例模式概述"></a>单例模式概述</h1><blockquote>
 <p>单例模式，是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例的特殊类。通过单例模式可以保证系统中，应用该模式的类一个类只有一个实例。即一个类只有一个对象实例</p>
 </blockquote>
 <blockquote>
@@ -396,65 +395,13 @@
 <li>指向自己实例的私有静态引用；</li>
 <li>以自己实例为返回值的静态的公有方法。</li>
 </ul>
-<h1 id="单例模式实现"><a href="#单例模式实现" class="headerlink" title="单例模式实现"></a>单例模式实现</h1><blockquote>
-<p>单例模式可以分为懒汉式和饿汉式：</p>
-<blockquote>
-<p>懒汉式单例模式：在类加载时不初始化。<br>饿汉式单例模式：在类加载时就完成了初始化，所以类加载比较慢，但获取对象的速度快。</p>
-</blockquote>
-</blockquote>
-<h3 id="第一种（懒汉，线程不安全）"><a href="#第一种（懒汉，线程不安全）" class="headerlink" title="第一种（懒汉，线程不安全）"></a>第一种（懒汉，线程不安全）</h3><pre><code>    public class SingletonDemo1 {
-private static SingletonDemo1 instance;
-private SingletonDemo1(){}
-public static SingletonDemo1 getInstance(){
-    if (instance == null) {
-        instance = new SingletonDemo1();
-    }
-    return instance;
-}
-}
-</code></pre><h3 id="第二种（懒汉，线程安全）"><a href="#第二种（懒汉，线程安全）" class="headerlink" title="第二种（懒汉，线程安全）"></a>第二种（懒汉，线程安全）</h3><pre><code>public class SingletonDemo2 {
-private static SingletonDemo2 instance;
-private SingletonDemo2(){}
-public static synchronized SingletonDemo2 getInstance(){
-    if (instance == null) {
-        instance = new SingletonDemo2();
-    }
-    return instance;
-}
-}
-</code></pre><h3 id="第三种（饿汉）"><a href="#第三种（饿汉）" class="headerlink" title="第三种（饿汉）"></a>第三种（饿汉）</h3><pre><code>public class SingletonDemo3 {
-private static SingletonDemo3 instance = new SingletonDemo3();
-private SingletonDemo3(){}
-public static SingletonDemo3 getInstance(){
-    return instance;
-}
-}
-</code></pre><h1 id="单例模式优缺点"><a href="#单例模式优缺点" class="headerlink" title="单例模式优缺点"></a>单例模式优缺点</h1><blockquote>
-<p>优点：</p>
-</blockquote>
-<ol>
-<li>在单例模式中，活动的单例只有一个实例，对单例类的所有实例化得到的都是相同的一个实例。这样就 防止其它对象对自己的实例化，确保所有的对象都访问一个实例</li>
-<li>单例模式具有一定的伸缩性，类自己来控制实例化进程，类就在改变实例化进程上有相应的伸缩性。</li>
-<li>提供了对唯一实例的受控访问。</li>
-<li>由于在系统内存中只存在一个对象，因此可以 节约系统资源，当 需要频繁创建和销毁的对象时单例模式无疑可以提高系统的性能。</li>
-<li>允许可变数目的实例。 </li>
-<li>避免对共享资源的多重占用。</li>
-</ol>
-<blockquote>
-<p>缺点</p>
-</blockquote>
-<ol>
-<li>不适用于变化的对象，如果同一类型的对象总是要在不同的用例场景发生变化，单例就会引起数据的错误，不能保存彼此的状态。 </li>
-<li>由于单利模式中没有抽象层，因此单例类的扩展有很大的困难。 </li>
-<li>单例类的职责过重，在一定程度上违背了“单一职责原则”。 </li>
-<li>滥用单例将带来一些负面问题，如为了节省资源将数据库连接池对象设计为的单例类，可能会导致共享连接池对象的程序过多而出现连接池溢出；如果实例化的对象长时间不被利用，系统会认为是垃圾而被回收，这将导致对象状态的丢失。<h1 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h1>由于单例模式具有以上优点，并且形式上比较简单，所以是日常开发中用的比较多的一种设计模式，其核心在于为整个系统提供一个唯一的实例，其应用场景包括但不仅限于以下几种：</li>
-</ol>
-<ul>
-<li>有状态的工具类对象；</li>
-<li>频繁访问数据库或文件的对象；<br>我的cnds：<a href="https://blog.csdn.net/qq_38384971" title="cnds" target="_blank" rel="noopener">https://blog.csdn.net/qq_38384971</a></li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/14/java单例模式/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -587,6 +534,27 @@ public static SingletonDemo3 getInstance(){
         
           
             <p>下载图片<br> <a href="/download/zz.jpg">点击下载</a><br>  <img src="https://ws1.sinaimg.cn/large/c3a6dd62ly1ft9e4w2trhj22801z4qhw.jpg" alt="avatar"></p>
+<h1 id="测试1"><a href="#测试1" class="headerlink" title="测试1"></a>测试1</h1><h2 id="测试2"><a href="#测试2" class="headerlink" title="测试2"></a>测试2</h2><p>###测试3</p>
+<p>####测试4<br>    public static void main(String[] args) {<br>                MyLinkList myLinkList = new MyLinkList();<br>                for (int i = 0; i &lt; 100; i++) {<br>                    myLinkList.add(i);<br>                }</p>
+<p><code>public static void main(String[] args) {
+         MyLinkList myLinkList = new MyLinkList();
+         for (int i = 0; i &lt; 100; i++) {
+         myLinkList.add(i);
+          }</code> </p>
+<blockquote>
+<p>测试yLinkList.add(i);</p>
+</blockquote>
+<ul>
+<li>测试</li>
+<li>cs</li>
+<li>测试</li>
+</ul>
+<ol>
+<li>测试</li>
+<li>测试<br><strong>测试</strong><br><em>测试</em></li>
+</ol>
+<hr>
+<p>2018/7/14 16:55:56 </p>
 
           
         
@@ -741,64 +709,16 @@ public static SingletonDemo3 getInstance(){
 
       
         
-          
-            <pre><code>public class Node {
-
-    private int date;
-    //指向下一个节点个引用
-    private Node next;
-
-    public int getDate() {
-        return date;
-    }
-
-    public void setDate(int date) {
-        this.date = date;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
-}
-
-
-
-
-public class MyLinkList {
-    private Node head=new Node();
-    private Node tail=head;
-    //定义存放数据方法
-    public void add(int num){
-        //创建一个节点，将数据填充到节点，将尾部节点指向新创建的节点
-        Node node=new Node();
-        //将数据填充节点
-        node.setDate(num);
-    tail.setNext(node);
-        tail=node;
-    }
-    //定义get方法
-    public int get(int index){
-        Node target=head;
-        for (int i = 0; i &lt; index+1; i++) {
-            target=target.getNext();
-        }
-        return target.getDate();
-    }
-
-    public static void main(String[] args) {
-        MyLinkList myLinkList = new MyLinkList();
-        for (int i = 0; i &lt; 100; i++) {
-            myLinkList.add(i);
-        }
-        System.out.println(myLinkList.get(1));
-    }
-}
-</code></pre>
-          
+          <h2 id="创建一个节点和一个对象"><a href="#创建一个节点和一个对象" class="headerlink" title="创建一个节点和一个对象"></a>创建一个节点和一个对象</h2><blockquote>
+<p>节点包含两个属性：数据，和指向连接<br>对象实现添加和查询方法</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/13/链表的java实现/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1040,7 +960,7 @@ public class MyLinkList {
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.0k字</span>
+  <span class="post-count">博客全站共1.1k字</span>
 </div>
 
 

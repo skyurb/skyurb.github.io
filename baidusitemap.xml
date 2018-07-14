@@ -4,43 +4,8 @@
 
     
   <url>
-    <loc>http://skyurb.cn/2018/07/14/java%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2018-07-14T07:45:41.134Z</lastmod>
-    <data>
-        <display>
-        <title>java单例模式</title>
-        <pubTime>2018-07-14T07:09:33.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="JAVA" url="http://skyurb.cn/categories/JAVA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://skyurb.cn/2018/07/14/text/</loc>
-    <lastmod>2018-07-14T06:54:36.217Z</lastmod>
-    <data>
-        <display>
-        <title>text</title>
-        <pubTime>2018-07-14T03:50:13.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://skyurb.cn/2018/07/13/%E9%93%BE%E8%A1%A8%E7%9A%84java%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2018-07-14T03:09:57.155Z</lastmod>
+    <lastmod>2018-07-14T09:00:40.535Z</lastmod>
     <data>
         <display>
         <title>链表的java实现</title>
@@ -54,6 +19,41 @@
            
              
               <breadCrumb title="数据结构" url="http://skyurb.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://skyurb.cn/2018/07/14/text/</loc>
+    <lastmod>2018-07-14T08:57:33.450Z</lastmod>
+    <data>
+        <display>
+        <title>text</title>
+        <pubTime>2018-07-14T03:50:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://skyurb.cn/2018/07/14/java%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-07-14T08:17:51.989Z</lastmod>
+    <data>
+        <display>
+        <title>java单例模式</title>
+        <pubTime>2018-07-14T07:09:33.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA" url="http://skyurb.cn/categories/JAVA/"/>
           
         </display>
     </data>
