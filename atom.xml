@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://skyurb.cn/"/>
-  <updated>2018-07-13T14:01:06.560Z</updated>
+  <updated>2018-07-14T03:09:57.155Z</updated>
   <id>http://skyurb.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://skyurb.cn/2018/07/13/%E9%93%BE%E8%A1%A8%E7%9A%84java%E5%AE%9E%E7%8E%B0/"/>
     <id>http://skyurb.cn/2018/07/13/链表的java实现/</id>
     <published>2018-07-13T12:37:07.000Z</published>
-    <updated>2018-07-13T14:01:06.560Z</updated>
+    <updated>2018-07-14T03:09:57.155Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>public class Node {    private int date;    //指向下一个节点个引用    private Node next;    public int getDate() {        return date;    }    public void setDate(int date) {        this.date = date;    }    public Node getNext() {        return next;    }    public void setNext(Node next) {        this.next = next;    }}public class MyLinkList {    private Node head=new Node();    private Node tail=head;    //定义存放数据方法    public void add(int num){        //创建一个节点，将数据填充到节点，将尾部节点指向新创建的节点        Node node=new Node();        //将数据填充节点        node.setDate(num);        //然后将    // Node next=tail.getNext();    tail.setNext(node);        tail=node;    }    //定义get方法    public int get(int index){        Node target=head;        for (int i = 0; i &lt; index+1; i++) {            target=target.getNext();        }        return target.getDate();    }    public static void main(String[] args) {        MyLinkList myLinkList = new MyLinkList();        for (int i = 0; i &lt; 100; i++) {            myLinkList.add(i);        }        System.out.println(myLinkList.get(1));    }}</code></pre>]]></content>
+    <content type="html"><![CDATA[<pre><code>public class Node {    private int date;    //指向下一个节点个引用    private Node next;    public int getDate() {        return date;    }    public void setDate(int date) {        this.date = date;    }    public Node getNext() {        return next;    }    public void setNext(Node next) {        this.next = next;    }}public class MyLinkList {    private Node head=new Node();    private Node tail=head;    //定义存放数据方法    public void add(int num){        //创建一个节点，将数据填充到节点，将尾部节点指向新创建的节点        Node node=new Node();        //将数据填充节点        node.setDate(num);    tail.setNext(node);        tail=node;    }    //定义get方法    public int get(int index){        Node target=head;        for (int i = 0; i &lt; index+1; i++) {            target=target.getNext();        }        return target.getDate();    }    public static void main(String[] args) {        MyLinkList myLinkList = new MyLinkList();        for (int i = 0; i &lt; 100; i++) {            myLinkList.add(i);        }        System.out.println(myLinkList.get(1));    }}</code></pre>]]></content>
     
     <summary type="html">
     
