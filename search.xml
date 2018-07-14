@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[java单例模式]]></title>
+    <url>%2F2018%2F07%2F14%2Fjava%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[单例模式概述 单例模式，是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例的特殊类。通过单例模式可以保证系统中，应用该模式的类一个类只有一个实例。即一个类只有一个对象实例 Java中单例模式定义：“一个类有且仅有一个实例，并且自行实例化向整个系统提供。” 单例模式三要素： 私有的构造方法； 指向自己实例的私有静态引用； 以自己实例为返回值的静态的公有方法。 单例模式实现 单例模式可以分为懒汉式和饿汉式： 懒汉式单例模式：在类加载时不初始化。饿汉式单例模式：在类加载时就完成了初始化，所以类加载比较慢，但获取对象的速度快。 第一种（懒汉，线程不安全） public class SingletonDemo1 { private static SingletonDemo1 instance; private SingletonDemo1(){} public static SingletonDemo1 getInstance(){ if (instance == null) { instance = new SingletonDemo1(); } return instance; } } 第二种（懒汉，线程安全）public class SingletonDemo2 { private static SingletonDemo2 instance; private SingletonDemo2(){} public static synchronized SingletonDemo2 getInstance(){ if (instance == null) { instance = new SingletonDemo2(); } return instance; } } 第三种（饿汉）public class SingletonDemo3 { private static SingletonDemo3 instance = new SingletonDemo3(); private SingletonDemo3(){} public static SingletonDemo3 getInstance(){ return instance; } } 单例模式优缺点 优点： 在单例模式中，活动的单例只有一个实例，对单例类的所有实例化得到的都是相同的一个实例。这样就 防止其它对象对自己的实例化，确保所有的对象都访问一个实例 单例模式具有一定的伸缩性，类自己来控制实例化进程，类就在改变实例化进程上有相应的伸缩性。 提供了对唯一实例的受控访问。 由于在系统内存中只存在一个对象，因此可以 节约系统资源，当 需要频繁创建和销毁的对象时单例模式无疑可以提高系统的性能。 允许可变数目的实例。 避免对共享资源的多重占用。 缺点 不适用于变化的对象，如果同一类型的对象总是要在不同的用例场景发生变化，单例就会引起数据的错误，不能保存彼此的状态。 由于单利模式中没有抽象层，因此单例类的扩展有很大的困难。 单例类的职责过重，在一定程度上违背了“单一职责原则”。 滥用单例将带来一些负面问题，如为了节省资源将数据库连接池对象设计为的单例类，可能会导致共享连接池对象的程序过多而出现连接池溢出；如果实例化的对象长时间不被利用，系统会认为是垃圾而被回收，这将导致对象状态的丢失。使用场景由于单例模式具有以上优点，并且形式上比较简单，所以是日常开发中用的比较多的一种设计模式，其核心在于为整个系统提供一个唯一的实例，其应用场景包括但不仅限于以下几种： 有状态的工具类对象； 频繁访问数据库或文件的对象；我的cnds：https://blog.csdn.net/qq_38384971]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[text]]></title>
     <url>%2F2018%2F07%2F14%2Ftext%2F</url>
     <content type="text"><![CDATA[下载图片 点击下载]]></content>
