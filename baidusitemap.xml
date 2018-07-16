@@ -4,6 +4,51 @@
 
     
   <url>
+    <loc>http://skyurb.cn/2018/07/14/text/</loc>
+    <lastmod>2018-07-16T12:22:34.396Z</lastmod>
+    <data>
+        <display>
+        <title>text</title>
+        <pubTime>2018-07-14T03:50:13.000Z</pubTime>
+        
+        <tag>旅行</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://skyurb.cn/books/index.html</loc>
+    <lastmod>2018-07-16T12:20:08.035Z</lastmod>
+    <data>
+        <display>
+        <title>books</title>
+        <pubTime>2018-07-16T12:08:10.000Z</pubTime>
+        
+         
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://skyurb.cn/travel/index.html</loc>
+    <lastmod>2018-07-16T12:20:02.451Z</lastmod>
+    <data>
+        <display>
+        <title>travel</title>
+        <pubTime>2018-07-16T12:08:00.000Z</pubTime>
+        
+         
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://skyurb.cn/2018/07/01/%E6%96%B0%E6%96%87%E6%A1%A3/</loc>
     <lastmod>2018-07-16T02:56:46.748Z</lastmod>
     <data>
@@ -80,21 +125,6 @@
              
               <breadCrumb title="数据结构" url="http://skyurb.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://skyurb.cn/2018/07/14/text/</loc>
-    <lastmod>2018-07-14T08:57:33.450Z</lastmod>
-    <data>
-        <display>
-        <title>text</title>
-        <pubTime>2018-07-14T03:50:13.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>

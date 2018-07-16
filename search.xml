@@ -26,6 +26,9 @@
     <title><![CDATA[text]]></title>
     <url>%2F2018%2F07%2F14%2Ftext%2F</url>
     <content type="text"><![CDATA[下载图片 点击下载 测试1测试2###测试3 ####测试4 public static void main(String[] args) { MyLinkList myLinkList = new MyLinkList(); for (int i = 0; i &lt; 100; i++) { myLinkList.add(i); } public static void main(String[] args) { MyLinkList myLinkList = new MyLinkList(); for (int i = 0; i &lt; 100; i++) { myLinkList.add(i); } 测试yLinkList.add(i); 测试 cs 测试 测试 测试测试测试 2018/7/14 16:55:56]]></content>
+      <tags>
+        <tag>旅行</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[链表的java实现]]></title>
