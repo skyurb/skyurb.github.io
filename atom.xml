@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://skyurb.cn/"/>
-  <updated>2018-07-14T08:17:51.989Z</updated>
+  <updated>2018-07-16T02:06:02.730Z</updated>
   <id>http://skyurb.cn/</id>
   
   <author>
@@ -17,13 +17,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>内部类</title>
+    <link href="http://skyurb.cn/2018/07/16/%E5%86%85%E9%83%A8%E7%B1%BB/"/>
+    <id>http://skyurb.cn/2018/07/16/内部类/</id>
+    <published>2018-07-16T01:42:07.000Z</published>
+    <updated>2018-07-16T02:06:02.730Z</updated>
+    
+    <content type="html"><![CDATA[<p>#定义：在一个类的内部又定义了一个类，这就是内部类。#<br>举例：</p><pre><code>public class OuterClass {private String outerName;private int outerAge;public class InnerClass{    private String innerName;    private int innerAge;}}</code></pre><p>内部类是一个编译时概念，编译后外部类及其内部类会生成两个独立的class文件： OuterClass.class和OuterClass$InnerClass.class<br>内部类可以直接访问外部类的元素，但是外部类不可以直接访问内部类的元素<br><a id="more"></a></p><h2 id="表现形式"><a href="#表现形式" class="headerlink" title="表现形式"></a>表现形式</h2><ol><li>静态内部类<blockquote><p>关键字static可以修饰成员变量、方法、代码块，其实它还可以修饰内部类，使用static修饰的内部类我们称之为静态内部类。静态内部类与非静态内部类之间存在一个最大的区别，我们知道非静态内部类在编译完成之后会隐含地保存着一个引用，该引用是指向创建它的外围内，但是静态内部类却没有。没有这个引用就意味着：</p></blockquote></li></ol><p>静态内部类的创建是不需要依赖于外围类，可以直接创建<br>静态内部类不可以使用任何外围类的非static成员变量和方法，而内部类则都可以</p><ol start="2"><li>成员内部类<blockquote><p>成员内部类也是最普通的内部类，它是外部类的一个成员，所以他是可以无限制的访问外围类的所有成员属性和方法，尽管是private的，但是外围类要访问内部类的成员属性和方法则需要通过内部类实例来访问。</p></blockquote></li></ol><p>在成员内部类中要注意两点：</p><p>成员内部类中不能存在任何static的变量和方法<br>成员内部类是依附于外围类的，所以只有先创建了外围类才能够创建内部类</p><ol start="3"><li>局部内部类<blockquote><p>有这样一种内部类，它是嵌套在方法和作用于内的，对于这个类的使用主要是应用与解决比较复杂的问题，想创建一个类来辅助我们的解决方案，到那时又不希望这个类是公共可用的，所以就产生了局部内部类，局部内部类和成员内部类一样被编译，只是它的作用域发生了改变，它只能在该方法和属性中被使用，出了该方法和属性就会失效。</p></blockquote></li><li>匿名内部类<blockquote><p>匿名内部类其实就是一个没有名字的方法内部类，所以它符合方法内部类的所有约束，初次之外，还有一些地方需要注意：</p></blockquote></li></ol><p>匿名内部类是没有访问修饰符的。<br>匿名内部类必须继承一个抽象类或者实现一个接口<br>匿名内部类中不能存在任何静态成员或方法<br>匿名内部类是没有构造方法的，因为它没有类名。<br>一般使用匿名内部类的场景是，要继承或实现的接口只有一个抽象方法，比如添加一个监听器</p><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p><em>为什么要使用内部类？在《Think in java》中有这样一句话：使用内部类最吸引人的原因是：每个内部类都能独立地继承一个（接口的）实现，所以无论外围类是否已经继承了某个（接口的）实现，对于内部类都没有影响。</em><br>⒈ 内部类对象可以访问创建它的对象的实现，包括私有数据；<br>⒉ 内部类不为同一包的其他类所见，具有很好的封装性；<br>⒊ 使用内部类可以很方便的编写事件驱动程序；<br>⒋ 匿名内部类可以方便的定义运行时回调；<br>5.内部类可以方便的定义</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#定义：在一个类的内部又定义了一个类，这就是内部类。#&lt;br&gt;举例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public class OuterClass {
+private String outerName;
+private int outerAge;
+public class InnerClass{
+    private String innerName;
+    private int innerAge;
+}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;内部类是一个编译时概念，编译后外部类及其内部类会生成两个独立的class文件： OuterClass.class和OuterClass$InnerClass.class&lt;br&gt;内部类可以直接访问外部类的元素，但是外部类不可以直接访问内部类的元素&lt;br&gt;
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://skyurb.cn/categories/JAVA/"/>
+    
+    
+      <category term="java" scheme="http://skyurb.cn/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>java单例模式</title>
     <link href="http://skyurb.cn/2018/07/14/java%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
     <id>http://skyurb.cn/2018/07/14/java单例模式/</id>
     <published>2018-07-14T07:09:33.000Z</published>
-    <updated>2018-07-14T08:17:51.989Z</updated>
+    <updated>2018-07-16T00:54:31.293Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="单例模式概述"><a href="#单例模式概述" class="headerlink" title="单例模式概述"></a>单例模式概述</h1><blockquote><p>单例模式，是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例的特殊类。通过单例模式可以保证系统中，应用该模式的类一个类只有一个实例。即一个类只有一个对象实例</p></blockquote><blockquote><p>Java中单例模式定义：“一个类有且仅有一个实例，并且自行实例化向整个系统提供。”</p></blockquote><blockquote><p>单例模式三要素：</p></blockquote><ul><li>私有的构造方法；</li><li>指向自己实例的私有静态引用；</li><li>以自己实例为返回值的静态的公有方法。</li></ul><a id="more"></a><h1 id="单例模式实现"><a href="#单例模式实现" class="headerlink" title="单例模式实现"></a>单例模式实现</h1><blockquote><p>单例模式可以分为懒汉式和饿汉式：</p><blockquote><p>懒汉式单例模式：在类加载时不初始化。<br>饿汉式单例模式：在类加载时就完成了初始化，所以类加载比较慢，但获取对象的速度快。</p></blockquote></blockquote><h3 id="第一种（懒汉，线程不安全）"><a href="#第一种（懒汉，线程不安全）" class="headerlink" title="第一种（懒汉，线程不安全）"></a>第一种（懒汉，线程不安全）</h3><pre><code>    public class SingletonDemo1 {private static SingletonDemo1 instance;private SingletonDemo1(){}public static SingletonDemo1 getInstance(){    if (instance == null) {        instance = new SingletonDemo1();    }    return instance;}}</code></pre><h3 id="第二种（懒汉，线程安全）"><a href="#第二种（懒汉，线程安全）" class="headerlink" title="第二种（懒汉，线程安全）"></a>第二种（懒汉，线程安全）</h3><pre><code>public class SingletonDemo2 {private static SingletonDemo2 instance;private SingletonDemo2(){}public static synchronized SingletonDemo2 getInstance(){    if (instance == null) {        instance = new SingletonDemo2();    }    return instance;}}</code></pre><h3 id="第三种（饿汉）"><a href="#第三种（饿汉）" class="headerlink" title="第三种（饿汉）"></a>第三种（饿汉）</h3><pre><code>public class SingletonDemo3 {private static SingletonDemo3 instance = new SingletonDemo3();private SingletonDemo3(){}public static SingletonDemo3 getInstance(){    return instance;}}</code></pre><h1 id="单例模式优缺点"><a href="#单例模式优缺点" class="headerlink" title="单例模式优缺点"></a>单例模式优缺点</h1><blockquote><p>优点：</p></blockquote><ol><li>在单例模式中，活动的单例只有一个实例，对单例类的所有实例化得到的都是相同的一个实例。这样就 防止其它对象对自己的实例化，确保所有的对象都访问一个实例</li><li>单例模式具有一定的伸缩性，类自己来控制实例化进程，类就在改变实例化进程上有相应的伸缩性。</li><li>提供了对唯一实例的受控访问。</li><li>由于在系统内存中只存在一个对象，因此可以 节约系统资源，当 需要频繁创建和销毁的对象时单例模式无疑可以提高系统的性能。</li><li>允许可变数目的实例。 </li><li>避免对共享资源的多重占用。</li></ol><blockquote><p>缺点</p></blockquote><ol><li>不适用于变化的对象，如果同一类型的对象总是要在不同的用例场景发生变化，单例就会引起数据的错误，不能保存彼此的状态。 </li><li>由于单利模式中没有抽象层，因此单例类的扩展有很大的困难。 </li><li>单例类的职责过重，在一定程度上违背了“单一职责原则”。 </li><li>滥用单例将带来一些负面问题，如为了节省资源将数据库连接池对象设计为的单例类，可能会导致共享连接池对象的程序过多而出现连接池溢出；如果实例化的对象长时间不被利用，系统会认为是垃圾而被回收，这将导致对象状态的丢失。<h1 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h1>由于单例模式具有以上优点，并且形式上比较简单，所以是日常开发中用的比较多的一种设计模式，其核心在于为整个系统提供一个唯一的实例，其应用场景包括但不仅限于以下几种：</li></ol><ul><li>有状态的工具类对象；</li><li>频繁访问数据库或文件的对象；<br>我的cnds：<a href="https://blog.csdn.net/qq_38384971" title="cnds" target="_blank" rel="noopener">https://blog.csdn.net/qq_38384971</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="单例模式概述"><a href="#单例模式概述" class="headerlink" title="单例模式概述"></a>单例模式概述</h1><blockquote><p>单例模式，是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例的特殊类。通过单例模式可以保证系统中，应用该模式的类一个类只有一个实例。即一个类只有一个对象实例</p></blockquote><blockquote><p>Java中单例模式定义：“一个类有且仅有一个实例，并且自行实例化向整个系统提供。”</p></blockquote><blockquote><p>单例模式三要素：</p></blockquote><ul><li>私有的构造方法；</li><li>指向自己实例的私有静态引用；</li><li>以自己实例为返回值的静态的公有方法。</li></ul><a id="more"></a><h1 id="单例模式实现"><a href="#单例模式实现" class="headerlink" title="单例模式实现"></a>单例模式实现</h1><blockquote><p>单例模式可以分为懒汉式和饿汉式：</p><blockquote><p>懒汉式单例模式：在类加载时不初始化。<br>饿汉式单例模式：在类加载时就完成了初始化，所以类加载比较慢，但获取对象的速度快。</p></blockquote></blockquote><h3 id="第一种（懒汉，线程不安全）"><a href="#第一种（懒汉，线程不安全）" class="headerlink" title="第一种（懒汉，线程不安全）"></a>第一种（懒汉，线程不安全）</h3><pre><code>    public class SingletonDemo {private static SingletonDemo instance;private SingletonDemo1(){}public static SingletonDemo1 getInstance(){    if (instance == null) {        instance = new SingletonDemo1();    }    return instance;}}</code></pre><h3 id="第二种（懒汉，线程安全）"><a href="#第二种（懒汉，线程安全）" class="headerlink" title="第二种（懒汉，线程安全）"></a>第二种（懒汉，线程安全）</h3><pre><code>public class SingletonDemo {private static SingletonDemo instance;private SingletonDemo2(){}public static synchronized SingletonDemo2 getInstance(){    if (instance == null) {        instance = new SingletonDemo2();    }    return instance;}}</code></pre><h3 id="第三种（饿汉）"><a href="#第三种（饿汉）" class="headerlink" title="第三种（饿汉）"></a>第三种（饿汉）</h3><pre><code>public class SingletonDemo {private static SingletonDemo instance = new SingletonDemo3();private SingletonDemo3(){}public static SingletonDemo3 getInstance(){    return instance;}}</code></pre><h1 id="单例模式优缺点"><a href="#单例模式优缺点" class="headerlink" title="单例模式优缺点"></a>单例模式优缺点</h1><blockquote><p>优点：</p></blockquote><ol><li>在单例模式中，活动的单例只有一个实例，对单例类的所有实例化得到的都是相同的一个实例。这样就 防止其它对象对自己的实例化，确保所有的对象都访问一个实例</li><li>单例模式具有一定的伸缩性，类自己来控制实例化进程，类就在改变实例化进程上有相应的伸缩性。</li><li>提供了对唯一实例的受控访问。</li><li>由于在系统内存中只存在一个对象，因此可以 节约系统资源，当 需要频繁创建和销毁的对象时单例模式无疑可以提高系统的性能。</li><li>允许可变数目的实例。 </li><li>避免对共享资源的多重占用。</li></ol><blockquote><p>缺点</p></blockquote><ol><li>不适用于变化的对象，如果同一类型的对象总是要在不同的用例场景发生变化，单例就会引起数据的错误，不能保存彼此的状态。 </li><li>由于单利模式中没有抽象层，因此单例类的扩展有很大的困难。 </li><li>单例类的职责过重，在一定程度上违背了“单一职责原则”。 </li><li>滥用单例将带来一些负面问题，如为了节省资源将数据库连接池对象设计为的单例类，可能会导致共享连接池对象的程序过多而出现连接池溢出；如果实例化的对象长时间不被利用，系统会认为是垃圾而被回收，这将导致对象状态的丢失。<h1 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h1>由于单例模式具有以上优点，并且形式上比较简单，所以是日常开发中用的比较多的一种设计模式，其核心在于为整个系统提供一个唯一的实例，其应用场景包括但不仅限于以下几种：</li></ol><ul><li>有状态的工具类对象；</li><li>频繁访问数据库或文件的对象；<br>我的cnds：<a href="https://blog.csdn.net/qq_38384971" title="cnds" target="_blank" rel="noopener">https://blog.csdn.net/qq_38384971</a></li></ul>]]></content>
     
     <summary type="html">
     
