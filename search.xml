@@ -39,4 +39,15 @@
         <tag>链表</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[内部类]]></title>
+    <url>%2F2018%2F07%2F01%2F%E6%96%B0%E6%96%87%E6%A1%A3%2F</url>
+    <content type="text"><![CDATA[定义：在一个类的内部又定义了一个类，这就是内部类。举例： public class OuterClass { private String outerName; private int outerAge; public class InnerClass{ private String innerName; private int innerAge; } } 表现形式 静态内部类 成员内部类 局部内部类 匿名内部类特点为什么要使用内部类？在《Think in java》中有这样一句话：使用内部类最吸引人的原因是：每个内部类都能独立地继承一个（接口的）实现，所以无论外围类是否已经继承了某个（接口的）实现，对于内部类都没有影响。⒈ 内部类对象可以访问创建它的对象的实现，包括私有数据；⒉ 内部类不为同一包的其他类所见，具有很好的封装性；⒊ 使用内部类可以很方便的编写事件驱动程序；⒋ 匿名内部类可以方便的定义运行时回调；5.内部类可以方便的定义]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
 </search>

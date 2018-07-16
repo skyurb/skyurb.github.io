@@ -129,4 +129,32 @@ public class InnerClass{
     
   </entry>
   
+  <entry>
+    <title>内部类</title>
+    <link href="http://skyurb.cn/2018/07/01/%E6%96%B0%E6%96%87%E6%A1%A3/"/>
+    <id>http://skyurb.cn/2018/07/01/新文档/</id>
+    <published>2018-07-01T01:42:07.000Z</published>
+    <updated>2018-07-16T02:56:46.748Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>定义：在一个类的内部又定义了一个类，这就是内部类。</strong><br>举例：</p><pre><code>public class OuterClass {private String outerName;private int outerAge;public class InnerClass{    private String innerName;    private int innerAge;}}</code></pre><h2 id="表现形式"><a href="#表现形式" class="headerlink" title="表现形式"></a>表现形式</h2><ol><li>静态内部类</li><li>成员内部类</li><li>局部内部类</li><li>匿名内部类<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><em>为什么要使用内部类？在《Think in java》中有这样一句话：使用内部类最吸引人的原因是：每个内部类都能独立地继承一个（接口的）实现，所以无论外围类是否已经继承了某个（接口的）实现，对于内部类都没有影响。</em><br>⒈ 内部类对象可以访问创建它的对象的实现，包括私有数据；<br>⒉ 内部类不为同一包的其他类所见，具有很好的封装性；<br>⒊ 使用内部类可以很方便的编写事件驱动程序；<br>⒋ 匿名内部类可以方便的定义运行时回调；<br>5.内部类可以方便的定义</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;定义：在一个类的内部又定义了一个类，这就是内部类。&lt;/strong&gt;&lt;br&gt;举例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public class OuterClass {
+private String outerName;
+private int outerAge
+      
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://skyurb.cn/categories/JAVA/"/>
+    
+    
+      <category term="java" scheme="http://skyurb.cn/tags/java/"/>
+    
+  </entry>
+  
 </feed>
