@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="#定义：在一个类的内部又定义了一个类，这就是内部类。#举例： public class OuterClass { private String outerName; private int outerAge; public class InnerClass{     private String innerName;     private int innerAge; } } 内部类是一个编译时概">
+<meta name="description" content="#定义：在一个类的内部又定义了一个类，这就是内部类。#举例：12345678public class OuterClass &amp;#123;  private String outerName;  private int outerAge;  public class InnerClass&amp;#123;      private String innerName;      private int in">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内部类">
 <meta property="og:url" content="http://skyurb.cn/2018/07/16/内部类/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="#定义：在一个类的内部又定义了一个类，这就是内部类。#举例： public class OuterClass { private String outerName; private int outerAge; public class InnerClass{     private String innerName;     private int innerAge; } } 内部类是一个编译时概">
+<meta property="og:description" content="#定义：在一个类的内部又定义了一个类，这就是内部类。#举例：12345678public class OuterClass &amp;#123;  private String outerName;  private int outerAge;  public class InnerClass&amp;#123;      private String innerName;      private int in">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T02:06:02.730Z">
+<meta property="og:updated_time" content="2018-07-17T13:53:18.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内部类">
-<meta name="twitter:description" content="#定义：在一个类的内部又定义了一个类，这就是内部类。#举例： public class OuterClass { private String outerName; private int outerAge; public class InnerClass{     private String innerName;     private int innerAge; } } 内部类是一个编译时概">
+<meta name="twitter:description" content="#定义：在一个类的内部又定义了一个类，这就是内部类。#举例：12345678public class OuterClass &amp;#123;  private String outerName;  private int outerAge;  public class InnerClass&amp;#123;      private String innerName;      private int in">
 
 
 
@@ -237,26 +237,6 @@
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-旅行">
-          <a href="/travel/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-plane"></i> <br />
-            
-            旅行
           </a>
         </li>
       
@@ -402,16 +382,8 @@
       
 
       
-        <p>#定义：在一个类的内部又定义了一个类，这就是内部类。#<br>举例：</p>
-<pre><code>public class OuterClass {
-private String outerName;
-private int outerAge;
-public class InnerClass{
-    private String innerName;
-    private int innerAge;
-}
-}
-</code></pre><p>内部类是一个编译时概念，编译后外部类及其内部类会生成两个独立的class文件： OuterClass.class和OuterClass$InnerClass.class<br>内部类可以直接访问外部类的元素，但是外部类不可以直接访问内部类的元素<br><a id="more"></a></p>
+        <p>#定义：在一个类的内部又定义了一个类，这就是内部类。#<br>举例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OuterClass</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String outerName;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> outerAge;</span><br><span class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClass</span></span>&#123;</span><br><span class="line">      <span class="keyword">private</span> String innerName;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">int</span> innerAge;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>内部类是一个编译时概念，编译后外部类及其内部类会生成两个独立的class文件： OuterClass.class和OuterClass$InnerClass.class<br>内部类可以直接访问外部类的元素，但是外部类不可以直接访问内部类的元素<br><a id="more"></a></p>
 <h2 id="表现形式"><a href="#表现形式" class="headerlink" title="表现形式"></a>表现形式</h2><ol>
 <li>静态内部类<blockquote>
 <p>关键字static可以修饰成员变量、方法、代码块，其实它还可以修饰内部类，使用static修饰的内部类我们称之为静态内部类。静态内部类与非静态内部类之间存在一个最大的区别，我们知道非静态内部类在编译完成之后会隐含地保存着一个引用，该引用是指向创建它的外围内，但是静态内部类却没有。没有这个引用就意味着：</p>
@@ -439,6 +411,25 @@ public class InnerClass{
 </ol>
 <p>匿名内部类是没有访问修饰符的。<br>匿名内部类必须继承一个抽象类或者实现一个接口<br>匿名内部类中不能存在任何静态成员或方法<br>匿名内部类是没有构造方法的，因为它没有类名。<br>一般使用匿名内部类的场景是，要继承或实现的接口只有一个抽象方法，比如添加一个监听器</p>
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p><em>为什么要使用内部类？在《Think in java》中有这样一句话：使用内部类最吸引人的原因是：每个内部类都能独立地继承一个（接口的）实现，所以无论外围类是否已经继承了某个（接口的）实现，对于内部类都没有影响。</em><br>⒈ 内部类对象可以访问创建它的对象的实现，包括私有数据；<br>⒉ 内部类不为同一包的其他类所见，具有很好的封装性；<br>⒊ 使用内部类可以很方便的编写事件驱动程序；<br>⒋ 匿名内部类可以方便的定义运行时回调；<br>5.内部类可以方便的定义</p>
+<hr>
+<h1 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h1><p>匿名内部类的创建方式<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> 父类构造器（参数列表）|实现接口（）  </span><br><span class="line">   &#123;  </span><br><span class="line">   <span class="comment">//匿名内部类的类体部分  </span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用匿名内部类我们必须要继承一个父类或者实现一个接口,这是因为匿名内部类是直接使用new来生成一个对象的引用。当然这个引用是隐式的<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Anonymous</span> </span>&#123;</span><br><span class="line">  <span class="comment">//测试匿名内部类</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      Inner inner = <span class="keyword">new</span> Inner() &#123;</span><br><span class="line">          <span class="meta">@Override</span></span><br><span class="line">          <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="string">"tom"</span>;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      System.out.println(inner.getName());</span><br></pre></td></tr></table></figure></p>
+<p>  在使用匿名内部类的过程中，我们需要注意如下几点：</p>
+<ul>
+<li>使用匿名内部类时，我们必须是继承一个类或者实现一个接口，但是两者不可兼得，同时也只能继承一个类或者实现一个接口。</li>
+</ul>
+<ul>
+<li>匿名内部类中是不能定义构造函数的。</li>
+</ul>
+<ul>
+<li>匿名内部类中不能存在任何的静态成员变量和静态方法。</li>
+</ul>
+<ul>
+<li>匿名内部类为局部内部类，所以局部内部类的所有限制同样对匿名内部类生效。</li>
+</ul>
+<ul>
+<li>匿名内部类不能是抽象的，它必须要实现继承的类或者实现的接口的所有抽象方法。</li>
+</ul>
 
       
     </div>
@@ -571,7 +562,7 @@ public class InnerClass{
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives">
               
                   <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
@@ -693,7 +684,7 @@ public class InnerClass{
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#表现形式"><span class="nav-number">1.</span> <span class="nav-text">表现形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点"><span class="nav-number">2.</span> <span class="nav-text">特点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#表现形式"><span class="nav-number">1.</span> <span class="nav-text">表现形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点"><span class="nav-number">2.</span> <span class="nav-text">特点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#匿名内部类"><span class="nav-number"></span> <span class="nav-text">匿名内部类</span></a></div>
             
 
           </div>
@@ -743,7 +734,7 @@ public class InnerClass{
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.3k字</span>
+  <span class="post-count">博客全站共2.9k字</span>
 </div>
 
 

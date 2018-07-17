@@ -237,26 +237,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-旅行">
-          <a href="/travel/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-plane"></i> <br />
-            
-            旅行
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-读书">
           <a href="/books/" rel="section">
             
@@ -401,16 +381,8 @@
 
       
         
-          <p>#定义：在一个类的内部又定义了一个类，这就是内部类。#<br>举例：</p>
-<pre><code>public class OuterClass {
-private String outerName;
-private int outerAge;
-public class InnerClass{
-    private String innerName;
-    private int innerAge;
-}
-}
-</code></pre><p>内部类是一个编译时概念，编译后外部类及其内部类会生成两个独立的class文件： OuterClass.class和OuterClass$InnerClass.class<br>内部类可以直接访问外部类的元素，但是外部类不可以直接访问内部类的元素<br>
+          <p>#定义：在一个类的内部又定义了一个类，这就是内部类。#<br>举例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OuterClass</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String outerName;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> outerAge;</span><br><span class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClass</span></span>&#123;</span><br><span class="line">      <span class="keyword">private</span> String innerName;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">int</span> innerAge;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>内部类是一个编译时概念，编译后外部类及其内部类会生成两个独立的class文件： OuterClass.class和OuterClass$InnerClass.class<br>内部类可以直接访问外部类的元素，但是外部类不可以直接访问内部类的元素<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/16/内部类/" rel="contents">
@@ -728,7 +700,7 @@ public class InnerClass{
 <p><code>public static void main(String[] args) {
          MyLinkList myLinkList = new MyLinkList();
          for (int i = 0; i &lt; 100; i++) {
-         myLinkList.add(i);
+         myLinkList.add(i);ll
           }</code> </p>
 <blockquote>
 <p>测试yLinkList.add(i);</p>
@@ -742,6 +714,11 @@ public class InnerClass{
 <li>测试</li>
 <li>测试<br><strong>测试</strong><br><em>测试</em></li>
 </ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">               MyLinkList myLinkList = <span class="keyword">new</span> MyLinkList();</span><br><span class="line">               <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">                   myLinkList.add(i);</span><br><span class="line">               &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><figcaption><span>[] [title] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 定义函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printme</span><span class="params">( str )</span>:</span></span><br><span class="line">   <span class="string">"打印任何传入的字符串"</span></span><br><span class="line">   <span class="keyword">print</span> str;</span><br><span class="line">   <span class="keyword">return</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 调用函数</span></span><br><span class="line">printme(<span class="string">"我要调用用户自定义函数!"</span>);</span><br><span class="line">printme(<span class="string">"再次调用同一函数"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>[] [title] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> w=<span class="built_in">window</span>.innerWidth</span><br><span class="line">|| <span class="built_in">document</span>.documentElement.clientWidth</span><br><span class="line">|| <span class="built_in">document</span>.body.clientWidth;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> h=<span class="built_in">window</span>.innerHeight</span><br><span class="line">|| <span class="built_in">document</span>.documentElement.clientHeight</span><br><span class="line">|| <span class="built_in">document</span>.body.clientHeight;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>[] [title] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"bpn"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"prenext"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"pre"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/js/js_obj_regexp.asp"</span> <span class="attr">title</span>=<span class="string">"JavaScript RegExp 对象"</span>&gt;</span>JS 正则表达式<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"next"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/js/js_window_screen.asp"</span> <span class="attr">title</span>=<span class="string">"JavaScript Window Screen"</span>&gt;</span>JS Screen<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[lang:] [title] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 <p>2018/7/14 16:55:56 </p>
 
@@ -1163,7 +1140,7 @@ public class InnerClass{
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives">
               
                   <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
@@ -1319,7 +1296,7 @@ public class InnerClass{
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.3k字</span>
+  <span class="post-count">博客全站共2.9k字</span>
 </div>
 
 

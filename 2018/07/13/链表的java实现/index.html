@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="创建一个节点和一个对象 节点包含两个属性：数据，和指向连接对象实现添加和查询方法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-14T09:05:21.913Z">
+<meta property="og:updated_time" content="2018-07-17T13:54:30.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="链表的java实现">
 <meta name="twitter:description" content="创建一个节点和一个对象 节点包含两个属性：数据，和指向连接对象实现添加和查询方法">
@@ -237,26 +237,6 @@
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-旅行">
-          <a href="/travel/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-plane"></i> <br />
-            
-            旅行
           </a>
         </li>
       
@@ -406,60 +386,9 @@
 <p>节点包含两个属性：数据，和指向连接<br>对象实现添加和查询方法</p>
 </blockquote>
 <a id="more"></a>
-<p>##创建节点</p>
-<pre><code>public class Node {
+<p>##创建节点<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">     </span><br><span class="line">         <span class="keyword">private</span> <span class="keyword">int</span> date;</span><br><span class="line">        </span><br><span class="line">         <span class="keyword">private</span> Node next;</span><br><span class="line"></span><br><span class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">             <span class="keyword">return</span> date;</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDate</span><span class="params">(<span class="keyword">int</span> date)</span> </span>&#123;</span><br><span class="line">             <span class="keyword">this</span>.date = date;</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         <span class="function"><span class="keyword">public</span> Node <span class="title">getNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">             <span class="keyword">return</span> next;</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNext</span><span class="params">(Node next)</span> </span>&#123;</span><br><span class="line">             <span class="keyword">this</span>.next = next;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>##创建对象<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyLinkList</span> </span>&#123;</span><br><span class="line">            <span class="keyword">private</span> Node head=<span class="keyword">new</span> Node();</span><br><span class="line">            <span class="keyword">private</span> Node tail=head;</span><br><span class="line">            <span class="comment">//定义存放数据方法</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;</span><br><span class="line">                <span class="comment">//创建一个节点，将数据填充到节点，将尾部节点指向新创建的节点</span></span><br><span class="line">                Node node=<span class="keyword">new</span> Node();</span><br><span class="line">                <span class="comment">//将数据填充节点</span></span><br><span class="line">                node.setDate(num);</span><br><span class="line">            tail.setNext(node);</span><br><span class="line">                tail=node;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//定义get方法</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">                Node target=head;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; index+<span class="number">1</span>; i++) &#123;</span><br><span class="line">                    target=target.getNext();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> target.getDate();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">                MyLinkList myLinkList = <span class="keyword">new</span> MyLinkList();</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">                    myLinkList.add(i);</span><br><span class="line">                &#125;</span><br><span class="line">                System.out.println(myLinkList.get(<span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
 
-    private int date;
-
-    private Node next;
-
-    public int getDate() {
-        return date;
-    }
-
-    public void setDate(int date) {
-        this.date = date;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
-}
-</code></pre><p>##创建对象</p>
-<pre><code>public class MyLinkList {
-    private Node head=new Node();
-    private Node tail=head;
-    //定义存放数据方法
-    public void add(int num){
-        //创建一个节点，将数据填充到节点，将尾部节点指向新创建的节点
-        Node node=new Node();
-        //将数据填充节点
-        node.setDate(num);
-    tail.setNext(node);
-        tail=node;
-    }
-    //定义get方法
-    public int get(int index){
-        Node target=head;
-        for (int i = 0; i &lt; index+1; i++) {
-            target=target.getNext();
-        }
-        return target.getDate();
-    }
-
-    public static void main(String[] args) {
-        MyLinkList myLinkList = new MyLinkList();
-        for (int i = 0; i &lt; 100; i++) {
-            myLinkList.add(i);
-        }
-        System.out.println(myLinkList.get(1));
-    }
-}
-</code></pre>
       
     </div>
     
@@ -597,7 +526,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives">
               
                   <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
@@ -769,7 +698,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.3k字</span>
+  <span class="post-count">博客全站共2.9k字</span>
 </div>
 
 
