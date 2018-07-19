@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="java基础易错知识整理数组初始值下面代码输出结果是0 1234public static void main(String[] args) &amp;#123;             int[] arry=new int[10];             Sysout.out.println(arr[i]);             &amp;#125; –int类型：0 –short类型：(short）0">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-19T12:05:02.401Z">
+<meta property="og:updated_time" content="2018-07-19T14:37:08.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础笔记整理">
 <meta name="twitter:description" content="java基础易错知识整理数组初始值下面代码输出结果是0 1234public static void main(String[] args) &amp;#123;             int[] arry=new int[10];             Sysout.out.println(arr[i]);             &amp;#125; –int类型：0 –short类型：(short）0">
@@ -416,7 +416,14 @@
 </li>
 </ul>
 <ul>
-<li>Equals是object中的方法，用于判断两个对象是否想等。默认的equals是== ,不过子类可以重写父类的方法，加以改变。典型如string integer等类都重写了equals方法<h2 id=""><a href="#" class="headerlink" title="#"></a>#</h2></li>
+<li>Equals是object中的方法，用于判断两个对象是否想等。默认的equals是== ,不过子类可以重写父类的方法，加以改变。典型如string integer等类都重写了equals方法<h2 id="ArrayList和LinkedList的区别"><a href="#ArrayList和LinkedList的区别" class="headerlink" title="ArrayList和LinkedList的区别"></a>ArrayList和LinkedList的区别</h2></li>
+<li>一个是Array(动态数组)的数据结构，一个是Link(链表)的数据结构，此外，它们两个都是对List接口的实现。<br>前者是数组队列，相当于动态数组；后者为双向链表结构，也可当作堆栈、队列、双端队列</li>
+<li>当随机访问List时（get和set操作），ArrayList比LinkedList的效率更高，因为LinkedList是线性的数据存储方式，所以需要移动指针从前往后依次查找</li>
+<li>当对数据进行增加和删除的操作时(add和remove操作)，LinkedList比ArrayList的效率更高，因为ArrayList是数组，所以在其中进行增删操作时，会对操作点之后所有数据的下标索引造成影响，需要进行数据的移动</li>
+<li>从利用效率来看，ArrayList自由性较低，因为它需要手动的设置固定大小的容量，但是它的使用比较方便，只需要创建，然后添加数据，通过调用下标进行使用；而LinkedList自由性较高，能够动态的随数据量的变化而变化，但是它不便于使用。</li>
+<li>ArrayList主要控件开销在于需要在List列表预留一定空间；而LinkList主要控件开销在于需要存储结点信息以及结点指针信息。<br><em>来自于：</em><a href="https://www.cnblogs.com/Amedeo/p/7885146.html" target="_blank" rel="noopener">https://www.cnblogs.com/Amedeo/p/7885146.html</a><h2 id="运行时异常和受检时异常区别"><a href="#运行时异常和受检时异常区别" class="headerlink" title="运行时异常和受检时异常区别"></a>运行时异常和受检时异常区别</h2>最本质的区别是RuntimeException是运行时才会发生的异常, 而受检查异常是编译时异常,编译器会分析哪些异常会在执行一个方法或者构造函数的时候抛出。 </li>
+<li>运行时异常（RuntimeException）也称作未检测的异常（unchecked exception），这表示这种异常不需要编译器来检测。RuntimeException是所有可以在运行时抛出的异常的父类。一个方法除要捕获异常外，如果它执行的时候可能会抛出RuntimeException的子类，那么它就不需要用throw语句来声明抛出的异常</li>
+<li>受检查异常（checked exception）都是编译器在编译时进行校验的，通过throws语句或者try{}cathch{} 语句块来处理检测异常。编译器会分析哪些异常会在执行一个方法或者构造函数的时候抛出。<h2 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h2>………</li>
 </ul>
 
       
@@ -552,7 +559,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -672,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java基础易错知识整理"><span class="nav-number">1.</span> <span class="nav-text">java基础易错知识整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组初始值"><span class="nav-number">1.1.</span> <span class="nav-text">数组初始值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#throw和throws的区别"><span class="nav-number">1.2.</span> <span class="nav-text">throw和throws的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆溢出和栈溢出"><span class="nav-number">1.3.</span> <span class="nav-text">堆溢出和栈溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String和StringBuffer，StringBuilder区别"><span class="nav-number">1.4.</span> <span class="nav-text">String和StringBuffer，StringBuilder区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中-号与equals-方法的区别"><span class="nav-number">1.5.</span> <span class="nav-text">Java中==号与equals()方法的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.6.</span> <span class="nav-text">#</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java基础易错知识整理"><span class="nav-number">1.</span> <span class="nav-text">java基础易错知识整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组初始值"><span class="nav-number">1.1.</span> <span class="nav-text">数组初始值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#throw和throws的区别"><span class="nav-number">1.2.</span> <span class="nav-text">throw和throws的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆溢出和栈溢出"><span class="nav-number">1.3.</span> <span class="nav-text">堆溢出和栈溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String和StringBuffer，StringBuilder区别"><span class="nav-number">1.4.</span> <span class="nav-text">String和StringBuffer，StringBuilder区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中-号与equals-方法的区别"><span class="nav-number">1.5.</span> <span class="nav-text">Java中==号与equals()方法的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList和LinkedList的区别"><span class="nav-number">1.6.</span> <span class="nav-text">ArrayList和LinkedList的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行时异常和受检时异常区别"><span class="nav-number">1.7.</span> <span class="nav-text">运行时异常和受检时异常区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待续"><span class="nav-number">1.8.</span> <span class="nav-text">待续</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -722,7 +729,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.8k字</span>
+  <span class="post-count">博客全站共5.2k字</span>
 </div>
 
 
