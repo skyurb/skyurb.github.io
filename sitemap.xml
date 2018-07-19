@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://skyurb.cn/books/index.html</loc>
+    
+    <lastmod>2018-07-19T14:51:38.794Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://skyurb.cn/2018/07/14/text/</loc>
     
-    <lastmod>2018-07-19T14:49:26.683Z</lastmod>
+    <lastmod>2018-07-19T14:50:20.771Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>http://skyurb.cn/about/index.html</loc>
     
     <lastmod>2018-07-16T12:35:30.164Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://skyurb.cn/books/index.html</loc>
-    
-    <lastmod>2018-07-16T12:20:08.035Z</lastmod>
     
   </url>
   
