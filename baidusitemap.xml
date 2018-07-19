@@ -4,6 +4,73 @@
 
     
   <url>
+    <loc>http://skyurb.cn/2018/07/14/text/</loc>
+    <lastmod>2018-07-19T12:06:42.625Z</lastmod>
+    <data>
+        <display>
+        <title>text</title>
+        <pubTime>2018-07-14T03:50:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://skyurb.cn/2018/07/19/java%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2018-07-19T12:05:02.401Z</lastmod>
+    <data>
+        <display>
+        <title>java基础笔记整理</title>
+        <pubTime>2018-07-19T11:04:08.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://skyurb.cn/2018/07/18/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</loc>
+    <lastmod>2018-07-18T01:45:04.625Z</lastmod>
+    <data>
+        <display>
+        <title>字符编码</title>
+        <pubTime>2018-07-18T01:29:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://skyurb.cn/2018/07/14/java%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-07-17T14:00:27.372Z</lastmod>
+    <data>
+        <display>
+        <title>java单例模式</title>
+        <pubTime>2018-07-14T07:09:33.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA" url="http://skyurb.cn/categories/JAVA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://skyurb.cn/2018/07/13/%E9%93%BE%E8%A1%A8%E7%9A%84java%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2018-07-17T13:54:30.659Z</lastmod>
     <data>
@@ -45,21 +112,6 @@
     </url>
 
     
-  <url>
-    <loc>http://skyurb.cn/2018/07/14/text/</loc>
-    <lastmod>2018-07-17T13:51:36.723Z</lastmod>
-    <data>
-        <display>
-        <title>text</title>
-        <pubTime>2018-07-14T03:50:13.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>http://skyurb.cn/books/index.html</loc>
@@ -96,26 +148,6 @@
         <display>
         <title>内部类</title>
         <pubTime>2018-07-01T01:42:07.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="JAVA" url="http://skyurb.cn/categories/JAVA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://skyurb.cn/2018/07/14/java%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2018-07-16T00:54:31.293Z</lastmod>
-    <data>
-        <display>
-        <title>java单例模式</title>
-        <pubTime>2018-07-14T07:09:33.000Z</pubTime>
         
         <tag>java</tag>
          

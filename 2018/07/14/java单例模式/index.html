@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="单例模式概述 单例模式，是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例的特殊类。通过单例模式可以保证系统中，应用该模式的类一个类只有一个实例。即一个类只有一个对象实例   Java中单例模式定义：“一个类有且仅有一个实例，并且自行实例化向整个系统提供。”   单例模式三要素：   私有的构造方法； 指向自己实例的私有静态引用； 以自己实例为返回值的静态的公有方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T00:54:31.293Z">
+<meta property="og:updated_time" content="2018-07-17T14:00:27.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java单例模式">
 <meta name="twitter:description" content="单例模式概述 单例模式，是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例的特殊类。通过单例模式可以保证系统中，应用该模式的类一个类只有一个实例。即一个类只有一个对象实例   Java中单例模式定义：“一个类有且仅有一个实例，并且自行实例化向整个系统提供。”   单例模式三要素：   私有的构造方法； 指向自己实例的私有静态引用； 以自己实例为返回值的静态的公有方法。">
@@ -403,34 +403,10 @@
 <p>懒汉式单例模式：在类加载时不初始化。<br>饿汉式单例模式：在类加载时就完成了初始化，所以类加载比较慢，但获取对象的速度快。</p>
 </blockquote>
 </blockquote>
-<h3 id="第一种（懒汉，线程不安全）"><a href="#第一种（懒汉，线程不安全）" class="headerlink" title="第一种（懒汉，线程不安全）"></a>第一种（懒汉，线程不安全）</h3><pre><code>    public class SingletonDemo {
-private static SingletonDemo instance;
-private SingletonDemo1(){}
-public static SingletonDemo1 getInstance(){
-    if (instance == null) {
-        instance = new SingletonDemo1();
-    }
-    return instance;
-}
-}
-</code></pre><h3 id="第二种（懒汉，线程安全）"><a href="#第二种（懒汉，线程安全）" class="headerlink" title="第二种（懒汉，线程安全）"></a>第二种（懒汉，线程安全）</h3><pre><code>public class SingletonDemo {
-private static SingletonDemo instance;
-private SingletonDemo2(){}
-public static synchronized SingletonDemo2 getInstance(){
-    if (instance == null) {
-        instance = new SingletonDemo2();
-    }
-    return instance;
-}
-}
-</code></pre><h3 id="第三种（饿汉）"><a href="#第三种（饿汉）" class="headerlink" title="第三种（饿汉）"></a>第三种（饿汉）</h3><pre><code>public class SingletonDemo {
-private static SingletonDemo instance = new SingletonDemo3();
-private SingletonDemo3(){}
-public static SingletonDemo3 getInstance(){
-    return instance;
-}
-}
-</code></pre><h1 id="单例模式优缺点"><a href="#单例模式优缺点" class="headerlink" title="单例模式优缺点"></a>单例模式优缺点</h1><blockquote>
+<h3 id="第一种（懒汉，线程不安全）"><a href="#第一种（懒汉，线程不安全）" class="headerlink" title="第一种（懒汉，线程不安全）"></a>第一种（懒汉，线程不安全）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo</span> </span>&#123;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> SingletonDemo instance;</span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="title">SingletonDemo1</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonDemo1 <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">           instance = <span class="keyword">new</span> SingletonDemo1();</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> instance;</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第二种（懒汉，线程安全）"><a href="#第二种（懒汉，线程安全）" class="headerlink" title="第二种（懒汉，线程安全）"></a>第二种（懒汉，线程安全）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo</span> </span>&#123;</span><br><span class="line">   <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo</span> </span>&#123;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> SingletonDemo instance;</span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="title">SingletonDemo2</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> SingletonDemo2 <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">           instance = <span class="keyword">new</span> SingletonDemo2();</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> instance;</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第三种（饿汉）"><a href="#第三种（饿汉）" class="headerlink" title="第三种（饿汉）"></a>第三种（饿汉）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo</span> </span>&#123;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> SingletonDemo instance = <span class="keyword">new</span> SingletonDemo3();</span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="title">SingletonDemo3</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonDemo3 <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">return</span> instance;</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="单例模式优缺点"><a href="#单例模式优缺点" class="headerlink" title="单例模式优缺点"></a>单例模式优缺点</h1><blockquote>
 <p>优点：</p>
 </blockquote>
 <ol>
@@ -592,7 +568,7 @@ public static SingletonDemo3 getInstance(){
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -614,7 +590,7 @@ public static SingletonDemo3 getInstance(){
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -762,7 +738,7 @@ public static SingletonDemo3 getInstance(){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.9k字</span>
+  <span class="post-count">博客全站共4.8k字</span>
 </div>
 
 
