@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="#定义：在一个类的内部又定义了一个类，这就是内部类。#举例：12345678public class OuterClass &amp;#123;  private String outerName;  private int outerAge;  public class InnerClass&amp;#123;      private String innerName;      private int in">
+<meta name="description" content="简述搜索引擎通常检索的场景是：给定几个关键词，找出包含关键词的文档用HashMap实现倒排索引的设想：  举例 有三本书，每本书中都会有几个关键字，通过关键字来检索到出现在那几本书中   实行：创建两个hashmap，一个用来存放原数据，一个用来存放新索引，以原数据的value分割后的单词做新索引的key，以原数据的value对应的key做索引value，添加到新索引中">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内部类">
-<meta property="og:url" content="http://skyurb.cn/2018/07/16/内部类/index.html">
+<meta property="og:title" content="用HashMap实现简单的倒排索引">
+<meta property="og:url" content="http://skyurb.cn/2018/07/20/用HashMap实现简单的倒排索引/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="#定义：在一个类的内部又定义了一个类，这就是内部类。#举例：12345678public class OuterClass &amp;#123;  private String outerName;  private int outerAge;  public class InnerClass&amp;#123;      private String innerName;      private int in">
+<meta property="og:description" content="简述搜索引擎通常检索的场景是：给定几个关键词，找出包含关键词的文档用HashMap实现倒排索引的设想：  举例 有三本书，每本书中都会有几个关键字，通过关键字来检索到出现在那几本书中   实行：创建两个hashmap，一个用来存放原数据，一个用来存放新索引，以原数据的value分割后的单词做新索引的key，以原数据的value对应的key做索引value，添加到新索引中">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-17T13:53:18.868Z">
+<meta property="og:updated_time" content="2018-07-20T12:49:52.421Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="内部类">
-<meta name="twitter:description" content="#定义：在一个类的内部又定义了一个类，这就是内部类。#举例：12345678public class OuterClass &amp;#123;  private String outerName;  private int outerAge;  public class InnerClass&amp;#123;      private String innerName;      private int in">
+<meta name="twitter:title" content="用HashMap实现简单的倒排索引">
+<meta name="twitter:description" content="简述搜索引擎通常检索的场景是：给定几个关键词，找出包含关键词的文档用HashMap实现倒排索引的设想：  举例 有三本书，每本书中都会有几个关键字，通过关键字来检索到出现在那几本书中   实行：创建两个hashmap，一个用来存放原数据，一个用来存放新索引，以原数据的value分割后的单词做新索引的key，以原数据的value对应的key做索引value，添加到新索引中">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://skyurb.cn/2018/07/16/内部类/"/>
+  <link rel="canonical" href="http://skyurb.cn/2018/07/20/用HashMap实现简单的倒排索引/"/>
 
 
 
 
 
-  <title>内部类 | Blog</title>
+  <title>用HashMap实现简单的倒排索引 | Blog</title>
   
 
 
@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://skyurb.cn/2018/07/16/内部类/">
+    <link itemprop="mainEntityOfPage" href="http://skyurb.cn/2018/07/20/用HashMap实现简单的倒排索引/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="skyurb">
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">内部类</h1>
+          <h1 class="post-title" itemprop="name headline">用HashMap实现简单的倒排索引</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-16T09:42:07+08:00">
-                2018-07-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-20T20:46:35+08:00">
+                2018-07-20
               </time>
             
 
@@ -323,28 +323,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JAVA/" itemprop="url" rel="index">
-                    <span itemprop="name">JAVA</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -353,8 +331,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/16/内部类/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/16/内部类/" itemprop="commentCount"></span>
+                <a href="/2018/07/20/用HashMap实现简单的倒排索引/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/20/用HashMap实现简单的倒排索引/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -382,54 +360,17 @@
       
 
       
-        <p>#定义：在一个类的内部又定义了一个类，这就是内部类。#<br>举例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OuterClass</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String outerName;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> outerAge;</span><br><span class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClass</span></span>&#123;</span><br><span class="line">      <span class="keyword">private</span> String innerName;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">int</span> innerAge;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
-<p>内部类是一个编译时概念，编译后外部类及其内部类会生成两个独立的class文件： OuterClass.class和OuterClass$InnerClass.class<br>内部类可以直接访问外部类的元素，但是外部类不可以直接访问内部类的元素<br><a id="more"></a></p>
-<h2 id="表现形式"><a href="#表现形式" class="headerlink" title="表现形式"></a>表现形式</h2><ol>
-<li>静态内部类<blockquote>
-<p>关键字static可以修饰成员变量、方法、代码块，其实它还可以修饰内部类，使用static修饰的内部类我们称之为静态内部类。静态内部类与非静态内部类之间存在一个最大的区别，我们知道非静态内部类在编译完成之后会隐含地保存着一个引用，该引用是指向创建它的外围内，但是静态内部类却没有。没有这个引用就意味着：</p>
-</blockquote>
-</li>
-</ol>
-<p>静态内部类的创建是不需要依赖于外围类，可以直接创建<br>静态内部类不可以使用任何外围类的非static成员变量和方法，而内部类则都可以</p>
-<ol start="2">
-<li>成员内部类<blockquote>
-<p>成员内部类也是最普通的内部类，它是外部类的一个成员，所以他是可以无限制的访问外围类的所有成员属性和方法，尽管是private的，但是外围类要访问内部类的成员属性和方法则需要通过内部类实例来访问。</p>
-</blockquote>
-</li>
-</ol>
-<p>在成员内部类中要注意两点：</p>
-<p>成员内部类中不能存在任何static的变量和方法<br>成员内部类是依附于外围类的，所以只有先创建了外围类才能够创建内部类</p>
-<ol start="3">
-<li>局部内部类<blockquote>
-<p>有这样一种内部类，它是嵌套在方法和作用于内的，对于这个类的使用主要是应用与解决比较复杂的问题，想创建一个类来辅助我们的解决方案，到那时又不希望这个类是公共可用的，所以就产生了局部内部类，局部内部类和成员内部类一样被编译，只是它的作用域发生了改变，它只能在该方法和属性中被使用，出了该方法和属性就会失效。</p>
-</blockquote>
-</li>
-<li>匿名内部类<blockquote>
-<p>匿名内部类其实就是一个没有名字的方法内部类，所以它符合方法内部类的所有约束，初次之外，还有一些地方需要注意：</p>
-</blockquote>
-</li>
-</ol>
-<p>匿名内部类是没有访问修饰符的。<br>匿名内部类必须继承一个抽象类或者实现一个接口<br>匿名内部类中不能存在任何静态成员或方法<br>匿名内部类是没有构造方法的，因为它没有类名。<br>一般使用匿名内部类的场景是，要继承或实现的接口只有一个抽象方法，比如添加一个监听器</p>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p><em>为什么要使用内部类？在《Think in java》中有这样一句话：使用内部类最吸引人的原因是：每个内部类都能独立地继承一个（接口的）实现，所以无论外围类是否已经继承了某个（接口的）实现，对于内部类都没有影响。</em><br>⒈ 内部类对象可以访问创建它的对象的实现，包括私有数据；<br>⒉ 内部类不为同一包的其他类所见，具有很好的封装性；<br>⒊ 使用内部类可以很方便的编写事件驱动程序；<br>⒋ 匿名内部类可以方便的定义运行时回调；<br>5.内部类可以方便的定义</p>
-<hr>
-<h1 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h1><p>匿名内部类的创建方式<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> 父类构造器（参数列表）|实现接口（）  </span><br><span class="line">   &#123;  </span><br><span class="line">   <span class="comment">//匿名内部类的类体部分  </span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
-<p>使用匿名内部类我们必须要继承一个父类或者实现一个接口,这是因为匿名内部类是直接使用new来生成一个对象的引用。当然这个引用是隐式的<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Anonymous</span> </span>&#123;</span><br><span class="line">  <span class="comment">//测试匿名内部类</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      Inner inner = <span class="keyword">new</span> Inner() &#123;</span><br><span class="line">          <span class="meta">@Override</span></span><br><span class="line">          <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="string">"tom"</span>;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      System.out.println(inner.getName());</span><br></pre></td></tr></table></figure></p>
-<p>  在使用匿名内部类的过程中，我们需要注意如下几点：</p>
+        <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>搜索引擎通常检索的场景是：给定几个关键词，找出包含关键词的文档<br>用HashMap实现倒排索引的设想：</p>
 <ul>
-<li>使用匿名内部类时，我们必须是继承一个类或者实现一个接口，但是两者不可兼得，同时也只能继承一个类或者实现一个接口。</li>
+<li>举例 有三本书，每本书中都会有几个关键字，通过关键字来检索到出现在那几本书中</li>
 </ul>
 <ul>
-<li>匿名内部类中是不能定义构造函数的。</li>
+<li>实行：创建两个hashmap，一个用来存放原数据，一个用来存放新索引，以原数据的value分割后的单词做新索引的key，以原数据的value对应的key做索引value，添加到新索引中<a id="more"></a>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2></li>
 </ul>
-<ul>
-<li>匿名内部类中不能存在任何的静态成员变量和静态方法。</li>
-</ul>
-<ul>
-<li>匿名内部类为局部内部类，所以局部内部类的所有限制同样对匿名内部类生效。</li>
-</ul>
-<ul>
-<li>匿名内部类不能是抽象的，它必须要实现继承的类或者实现的接口的所有抽象方法。</li>
-</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">       <span class="comment">//存储数据map</span></span><br><span class="line">       <span class="keyword">HashMap</span> date = <span class="keyword">new</span> <span class="keyword">HashMap</span>();</span><br><span class="line">       date.put(<span class="string">"book1"</span>,<span class="string">"hello world"</span>);</span><br><span class="line">       date.put(<span class="string">"book2"</span>,<span class="string">"hello beautiful world"</span>);</span><br><span class="line">       date.put(<span class="string">"book3"</span>,<span class="string">"hello beautiful new world"</span>);</span><br><span class="line">       <span class="comment">//索引的map</span></span><br><span class="line">       <span class="keyword">HashMap</span> index = <span class="keyword">new</span> <span class="keyword">HashMap</span>();</span><br><span class="line">       Set keySet = date.keySet();</span><br><span class="line">       <span class="comment">//遍历date的key</span></span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">Object</span> word:keySet) &#123;</span><br><span class="line">           <span class="keyword">String</span> keyString = (<span class="keyword">String</span>) word;</span><br><span class="line">           <span class="comment">//通过key获得value</span></span><br><span class="line">           <span class="keyword">String</span> count = (<span class="keyword">String</span>) date.<span class="built_in">get</span>(keyString);</span><br><span class="line">           <span class="comment">//将字符串分割成数组</span></span><br><span class="line">           <span class="keyword">String</span>[] words = count.<span class="built_in">split</span>(<span class="string">" "</span>);</span><br><span class="line">           <span class="comment">//遍历数组，获取关键字</span></span><br><span class="line">           <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt;words.length ; i++) &#123;</span><br><span class="line">               <span class="comment">//判断索引中是否存在关键字，如果不存在添加，存在将追加</span></span><br><span class="line">               <span class="keyword">if</span> (!index.containsKey(words[i]))&#123;</span><br><span class="line">                   <span class="comment">//创建一个arrylist用来添加或后续追加索引值</span></span><br><span class="line">                   ArrayList books = <span class="keyword">new</span> ArrayList();</span><br><span class="line">                   <span class="comment">//将date的key存入</span></span><br><span class="line">                   books.<span class="built_in">add</span>(keyString);</span><br><span class="line">                   <span class="comment">//将新组建的键值对存入索引</span></span><br><span class="line">                   index.put(words[i],books);</span><br><span class="line">               &#125;</span><br><span class="line">               <span class="keyword">else</span> &#123;</span><br><span class="line">                   <span class="comment">//如果存在关键字,通过关键字获取value，</span></span><br><span class="line">                   List books = (List) index.<span class="built_in">get</span>(words[i]);</span><br><span class="line">                   <span class="comment">//将date的key追加到value中</span></span><br><span class="line">                   books.<span class="built_in">add</span>(keyString);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//输出新map</span></span><br><span class="line">       System.out.<span class="built_in">println</span>(index);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="keyword">beautiful=[book2, </span><span class="keyword">book3], </span>new=[<span class="keyword">book3], </span>world=[<span class="keyword">book2, </span><span class="keyword">book1, </span><span class="keyword">book3], </span>hello=[<span class="keyword">book2, </span><span class="keyword">book1, </span><span class="keyword">book3]&#125;</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">Process </span>finished with exit <span class="meta">code</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -466,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/14/java单例模式/" rel="next" title="java单例模式">
-                <i class="fa fa-chevron-left"></i> java单例模式
+              <a href="/2018/07/19/java基础笔记整理/" rel="next" title="java基础笔记整理">
+                <i class="fa fa-chevron-left"></i> java基础笔记整理
               </a>
             
           </div>
@@ -475,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/18/字符编码/" rel="prev" title="字符编码">
-                字符编码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -688,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#表现形式"><span class="nav-number">1.</span> <span class="nav-text">表现形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点"><span class="nav-number">2.</span> <span class="nav-text">特点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#匿名内部类"><span class="nav-number"></span> <span class="nav-text">匿名内部类</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a></li></ol></div>
             
 
           </div>

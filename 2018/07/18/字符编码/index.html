@@ -95,12 +95,10 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="常用字符编码分类 字符集编码：就是用数字来表示各种字符 asc码：美国国家标准码一个字节表示一个字符 UTF：unicode世界范围的统一编码用四个字节表示一个字符UTF-8:优化以后的utf码。让英文语系的编码量明显减少，有保证了世界范围的通用 GBK：汉字内码扩展规范 Big5：在台湾、香港与澳门地区，使用的是繁体中文字符集">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/c3a6dd62ly1ftby79e67dj21hc0u0gty.jpg">
-<meta property="og:updated_time" content="2018-07-19T14:21:16.843Z">
+<meta property="og:updated_time" content="2018-07-20T12:59:25.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符编码">
 <meta name="twitter:description" content="常用字符编码分类 字符集编码：就是用数字来表示各种字符 asc码：美国国家标准码一个字节表示一个字符 UTF：unicode世界范围的统一编码用四个字节表示一个字符UTF-8:优化以后的utf码。让英文语系的编码量明显减少，有保证了世界范围的通用 GBK：汉字内码扩展规范 Big5：在台湾、香港与澳门地区，使用的是繁体中文字符集">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/c3a6dd62ly1ftby79e67dj21hc0u0gty.jpg">
 
 
 
@@ -366,9 +364,20 @@
 <li>asc码：美国国家标准码<br>一个字节表示一个字符</li>
 <li>UTF：unicode世界范围的统一编码<br>用四个字节表示一个字符<br>UTF-8:优化以后的utf码。让英文语系的编码量明显减少，有保证了世界范围的通用</li>
 <li>GBK：汉字内码扩展规范</li>
-<li>Big5：在台湾、香港与澳门地区，使用的是繁体中文字符集</li>
+<li>Big5：在台湾、香港与澳门地区，使用的是繁体中文字符集<a id="more"></a>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2></li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/c3a6dd62ly1ftby79e67dj21hc0u0gty.jpg" width="70%" height="30%"></p>
+<p>1、编码界最初只有ASCII码，只用了1byte中的7bit（0~127）；</p>
+<p>2、欧洲人发现128个不够了，就把1byte中没用的最高位给用上了，出现了Latin系列（ISO-8859系列）编码；</p>
+<p>3、中国人民通过对ASCII编码进行中文扩充改造，产生了GB2312编码，可以表示6000多个常用汉字；</p>
+<p>4、汉字实在太多了，还有繁体、各种字符呀，于是加以扩展，有了GBK；</p>
+<p>5、GBK还不够，少数民族的字还木有呀，于是GBK又扩展为GB18030；</p>
+<p>6、每个国家、语言都有自己的编码，彼此无法交流，迫切需要大一统局面的出现；</p>
+<p>7、Unicode诞生，可以容纳全世界的任何文字。Unicode分为UCS-2和UCS-4，分别是2字节和4字节，实际2字节就够用了；</p>
+<p>8、为了Unicode能实际应用（存储、传输），制定了Unicode的编码方式，即UTF，有UTF-8、UTF-16、UTF-32，其中UTF-8应用广泛；</p>
+<p>9、UTF-16、UTF-32均是多字节传输，存在字节顺序的问题，于是有了大头还是小头的概念，为了解决这个问题，引入了BOM。UTF-8是单字节传输，不存在这个问题，也就不需要BOM，但可以有，仅用来表明编码格式；</p>
+<p>10、要从“环境/终端/文本/程序”等不同层次去理解编码，并尝试解决遇到的问题；</p>
+<p><em>在线编码转换工具</em><a href="http://tool.chinaz.com/Tools/Unicode.aspx" target="_blank" rel="noopener">http://tool.chinaz.com/Tools/Unicode.aspx</a></p>
 
       
     </div>
@@ -501,7 +510,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -621,7 +630,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用字符编码分类"><span class="nav-number">1.</span> <span class="nav-text">常用字符编码分类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用字符编码分类"><span class="nav-number">1.</span> <span class="nav-text">常用字符编码分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -671,7 +680,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.2k字</span>
+  <span class="post-count">博客全站共6.0k字</span>
 </div>
 
 
