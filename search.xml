@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git学习]]></title>
+    <url>%2F2018%2F07%2F23%2Fgit%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[简介 Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 安装Git 目前支持 Linux/Unix、Solaris、Mac和 Windows 平台上运行。Git 各平台安装包下载地址为：http://git-scm.com/downloads liunx（Debian/Ubuntu）下下载：12apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \libz-dev libssl-dev liunx（Centos/RedHat）12apt-get install gityum -y install git-core 配置 配置个人的用户名称和电子邮件地址： 12git config --global user.name "yourname"git config --global user.email youremail@runoob.com 查看配置信息 1git config --list 检查版本 1git --version]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[用HashMap实现简单的倒排索引]]></title>
     <url>%2F2018%2F07%2F20%2F%E7%94%A8HashMap%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95%2F</url>
     <content type="text"><![CDATA[简述搜索引擎通常检索的场景是：给定几个关键词，找出包含关键词的文档用HashMap实现倒排索引的设想： 举例 有三本书，每本书中都会有几个关键字，通过关键字来检索到出现在那几本书中 实行：创建两个hashmap，一个用来存放原数据，一个用来存放新索引，以原数据的value分割后的单词做新索引的key，以原数据的value对应的key做索引value，添加到新索引中 实现 123456789101112131415161718192021222324252627282930313233343536373839public static void main(String[] args) &#123; //存储数据map HashMap date = new HashMap(); date.put("book1","hello world"); date.put("book2","hello beautiful world"); date.put("book3","hello beautiful new world"); //索引的map HashMap index = new HashMap(); Set keySet = date.keySet(); //遍历date的key for (Object word:keySet) &#123; String keyString = (String) word; //通过key获得value String count = (String) date.get(keyString); //将字符串分割成数组 String[] words = count.split(" "); //遍历数组，获取关键字 for (int i = 0; i &lt;words.length ; i++) &#123; //判断索引中是否存在关键字，如果不存在添加，存在将追加 if (!index.containsKey(words[i]))&#123; //创建一个arrylist用来添加或后续追加索引值 ArrayList books = new ArrayList(); //将date的key存入 books.add(keyString); //将新组建的键值对存入索引 index.put(words[i],books); &#125; else &#123; //如果存在关键字,通过关键字获取value， List books = (List) index.get(words[i]); //将date的key追加到value中 books.add(keyString); &#125; &#125; &#125; //输出新map System.out.println(index); &#125; 输出结果 123&#123;beautiful=[book2, book3], new=[book3], world=[book2, book1, book3], hello=[book2, book1, book3]&#125;Process finished with exit code 0]]></content>

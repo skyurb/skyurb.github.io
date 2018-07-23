@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://skyurb.cn/"/>
-  <updated>2018-07-21T08:36:07.192Z</updated>
+  <updated>2018-07-23T14:05:09.350Z</updated>
   <id>http://skyurb.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git学习</title>
+    <link href="http://skyurb.cn/2018/07/23/git%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://skyurb.cn/2018/07/23/git学习/</id>
+    <published>2018-07-23T13:42:08.000Z</published>
+    <updated>2018-07-23T14:05:09.350Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/0013848605496402772ffdb6ab448deb7eef7baa124171b000/0" alt=""></p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul><li>Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</li></ul><ul><li>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</li></ul><ul><li>Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。<a id="more"></a></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Git 目前支持 Linux/Unix、Solaris、Mac和 Windows 平台上运行。<br>Git 各平台安装包下载地址为：<a href="http://git-scm.com/downloads" target="_blank" rel="noopener">http://git-scm.com/downloads</a></p><p>liunx（Debian/Ubuntu）下下载：<br><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> install libcurl4-gnutls-<span class="built_in">dev</span> libexpat1-<span class="built_in">dev</span> gettext \</span><br><span class="line">libz-<span class="built_in">dev</span> libssl-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure></p><p>liunx（Centos/RedHat）<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get <span class="keyword">install</span> git</span><br><span class="line">yum -y <span class="keyword">install</span> git-core</span><br></pre></td></tr></table></figure></p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul><li><p>配置个人的用户名称和电子邮件地址：</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"yourname"</span></span><br><span class="line">git<span class="built_in"> config </span>--global user.email youremail@runoob.com</span><br></pre></td></tr></table></figure></li><li><p>查看配置信息</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--list</span><br></pre></td></tr></table></figure></li><li><p>检查版本</p><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="comment">--version</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.liaoxuefeng.com/cdn/files/attachments/0013848605496402772ffdb6ab448deb7eef7baa124171b000/0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://skyurb.cn/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>用HashMap实现简单的倒排索引</title>

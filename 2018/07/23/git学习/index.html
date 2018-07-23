@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="java," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -88,18 +88,20 @@
 
 
 
-<meta name="description" content="简述搜索引擎通常检索的场景是：给定几个关键词，找出包含关键词的文档用HashMap实现倒排索引的设想：  举例 有三本书，每本书中都会有几个关键字，通过关键字来检索到出现在那几本书中   实行：创建两个hashmap，一个用来存放原数据，一个用来存放新索引，以原数据的value分割后的单词做新索引的key，以原数据的value对应的key做索引value，添加到新索引中">
-<meta name="keywords" content="java">
+<meta name="description" content="简介 Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。   Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。   Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用HashMap实现简单的倒排索引">
-<meta property="og:url" content="http://skyurb.cn/2018/07/20/用HashMap实现简单的倒排索引/index.html">
+<meta property="og:title" content="git学习">
+<meta property="og:url" content="http://skyurb.cn/2018/07/23/git学习/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="简述搜索引擎通常检索的场景是：给定几个关键词，找出包含关键词的文档用HashMap实现倒排索引的设想：  举例 有三本书，每本书中都会有几个关键字，通过关键字来检索到出现在那几本书中   实行：创建两个hashmap，一个用来存放原数据，一个用来存放新索引，以原数据的value分割后的单词做新索引的key，以原数据的value对应的key做索引value，添加到新索引中">
+<meta property="og:description" content="简介 Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。   Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。   Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-21T08:36:07.192Z">
+<meta property="og:image" content="https://cdn.liaoxuefeng.com/cdn/files/attachments/0013848605496402772ffdb6ab448deb7eef7baa124171b000/0">
+<meta property="og:updated_time" content="2018-07-23T14:05:09.350Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用HashMap实现简单的倒排索引">
-<meta name="twitter:description" content="简述搜索引擎通常检索的场景是：给定几个关键词，找出包含关键词的文档用HashMap实现倒排索引的设想：  举例 有三本书，每本书中都会有几个关键字，通过关键字来检索到出现在那几本书中   实行：创建两个hashmap，一个用来存放原数据，一个用来存放新索引，以原数据的value分割后的单词做新索引的key，以原数据的value对应的key做索引value，添加到新索引中">
+<meta name="twitter:title" content="git学习">
+<meta name="twitter:description" content="简介 Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。   Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。   Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。">
+<meta name="twitter:image" content="https://cdn.liaoxuefeng.com/cdn/files/attachments/0013848605496402772ffdb6ab448deb7eef7baa124171b000/0">
 
 
 
@@ -129,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://skyurb.cn/2018/07/20/用HashMap实现简单的倒排索引/"/>
+  <link rel="canonical" href="http://skyurb.cn/2018/07/23/git学习/"/>
 
 
 
 
 
-  <title>用HashMap实现简单的倒排索引 | Blog</title>
+  <title>git学习 | Blog</title>
   
 
 
@@ -283,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://skyurb.cn/2018/07/20/用HashMap实现简单的倒排索引/">
+    <link itemprop="mainEntityOfPage" href="http://skyurb.cn/2018/07/23/git学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="skyurb">
@@ -300,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用HashMap实现简单的倒排索引</h1>
+          <h1 class="post-title" itemprop="name headline">git学习</h1>
         
 
         <div class="post-meta">
@@ -312,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-20T20:46:35+08:00">
-                2018-07-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T21:42:08+08:00">
+                2018-07-23
               </time>
             
 
@@ -331,8 +333,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/20/用HashMap实现简单的倒排索引/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/20/用HashMap实现简单的倒排索引/" itemprop="commentCount"></span>
+                <a href="/2018/07/23/git学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/23/git学习/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -360,17 +362,30 @@
       
 
       
-        <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>搜索引擎通常检索的场景是：给定几个关键词，找出包含关键词的文档<br>用HashMap实现倒排索引的设想：</p>
-<ul>
-<li>举例 有三本书，每本书中都会有几个关键字，通过关键字来检索到出现在那几本书中</li>
+        <p><img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/0013848605496402772ffdb6ab448deb7eef7baa124171b000/0" alt=""></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+<li>Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</li>
 </ul>
 <ul>
-<li>实行：创建两个hashmap，一个用来存放原数据，一个用来存放新索引，以原数据的value分割后的单词做新索引的key，以原数据的value对应的key做索引value，添加到新索引中<a id="more"></a>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2></li>
+<li>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</li>
 </ul>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">       <span class="comment">//存储数据map</span></span><br><span class="line">       <span class="keyword">HashMap</span> date = <span class="keyword">new</span> <span class="keyword">HashMap</span>();</span><br><span class="line">       date.put(<span class="string">"book1"</span>,<span class="string">"hello world"</span>);</span><br><span class="line">       date.put(<span class="string">"book2"</span>,<span class="string">"hello beautiful world"</span>);</span><br><span class="line">       date.put(<span class="string">"book3"</span>,<span class="string">"hello beautiful new world"</span>);</span><br><span class="line">       <span class="comment">//索引的map</span></span><br><span class="line">       <span class="keyword">HashMap</span> index = <span class="keyword">new</span> <span class="keyword">HashMap</span>();</span><br><span class="line">       Set keySet = date.keySet();</span><br><span class="line">       <span class="comment">//遍历date的key</span></span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">Object</span> word:keySet) &#123;</span><br><span class="line">           <span class="keyword">String</span> keyString = (<span class="keyword">String</span>) word;</span><br><span class="line">           <span class="comment">//通过key获得value</span></span><br><span class="line">           <span class="keyword">String</span> count = (<span class="keyword">String</span>) date.<span class="built_in">get</span>(keyString);</span><br><span class="line">           <span class="comment">//将字符串分割成数组</span></span><br><span class="line">           <span class="keyword">String</span>[] words = count.<span class="built_in">split</span>(<span class="string">" "</span>);</span><br><span class="line">           <span class="comment">//遍历数组，获取关键字</span></span><br><span class="line">           <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt;words.length ; i++) &#123;</span><br><span class="line">               <span class="comment">//判断索引中是否存在关键字，如果不存在添加，存在将追加</span></span><br><span class="line">               <span class="keyword">if</span> (!index.containsKey(words[i]))&#123;</span><br><span class="line">                   <span class="comment">//创建一个arrylist用来添加或后续追加索引值</span></span><br><span class="line">                   ArrayList books = <span class="keyword">new</span> ArrayList();</span><br><span class="line">                   <span class="comment">//将date的key存入</span></span><br><span class="line">                   books.<span class="built_in">add</span>(keyString);</span><br><span class="line">                   <span class="comment">//将新组建的键值对存入索引</span></span><br><span class="line">                   index.put(words[i],books);</span><br><span class="line">               &#125;</span><br><span class="line">               <span class="keyword">else</span> &#123;</span><br><span class="line">                   <span class="comment">//如果存在关键字,通过关键字获取value，</span></span><br><span class="line">                   List books = (List) index.<span class="built_in">get</span>(words[i]);</span><br><span class="line">                   <span class="comment">//将date的key追加到value中</span></span><br><span class="line">                   books.<span class="built_in">add</span>(keyString);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//输出新map</span></span><br><span class="line">       System.out.<span class="built_in">println</span>(index);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="keyword">beautiful=[book2, </span><span class="keyword">book3], </span>new=[<span class="keyword">book3], </span>world=[<span class="keyword">book2, </span><span class="keyword">book1, </span><span class="keyword">book3], </span>hello=[<span class="keyword">book2, </span><span class="keyword">book1, </span><span class="keyword">book3]&#125;</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">Process </span>finished with exit <span class="meta">code</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。<a id="more"></a>
+</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Git 目前支持 Linux/Unix、Solaris、Mac和 Windows 平台上运行。<br>Git 各平台安装包下载地址为：<a href="http://git-scm.com/downloads" target="_blank" rel="noopener">http://git-scm.com/downloads</a></p>
+<p>liunx（Debian/Ubuntu）下下载：<br><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> install libcurl4-gnutls-<span class="built_in">dev</span> libexpat1-<span class="built_in">dev</span> gettext \</span><br><span class="line">libz-<span class="built_in">dev</span> libssl-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure></p>
+<p>liunx（Centos/RedHat）<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get <span class="keyword">install</span> git</span><br><span class="line">yum -y <span class="keyword">install</span> git-core</span><br></pre></td></tr></table></figure></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li><p>配置个人的用户名称和电子邮件地址：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"yourname"</span></span><br><span class="line">git<span class="built_in"> config </span>--global user.email youremail@runoob.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看配置信息</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查版本</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="comment">--version</span></span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -394,7 +409,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag"># java</a>
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
       
@@ -407,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/19/java基础笔记整理/" rel="next" title="java基础笔记整理">
-                <i class="fa fa-chevron-left"></i> java基础笔记整理
+              <a href="/2018/07/20/用HashMap实现简单的倒排索引/" rel="next" title="用HashMap实现简单的倒排索引">
+                <i class="fa fa-chevron-left"></i> 用HashMap实现简单的倒排索引
               </a>
             
           </div>
@@ -416,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/23/git学习/" rel="prev" title="git学习">
-                git学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -629,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a></li></ol></div>
             
 
           </div>
