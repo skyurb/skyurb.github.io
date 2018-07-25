@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="java," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="1.字符串排序1234567891011121314151617181920public static void main(String[] args) &amp;#123;        //给定一字符串，进行排序        String str = &quot;hello&quot;;        char[] chars = str.toCharArray();        char temp=&apos; &apos;;">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础练习题">
+<meta property="og:url" content="http://skyurb.cn/2018/07/25/java基础练习题/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="1.字符串排序1234567891011121314151617181920public static void main(String[] args) &amp;#123;        //给定一字符串，进行排序        String str = &quot;hello&quot;;        char[] chars = str.toCharArray();        char temp=&apos; &apos;;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-25T08:05:41.398Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java基础练习题">
+<meta name="twitter:description" content="1.字符串排序1234567891011121314151617181920public static void main(String[] args) &amp;#123;        //给定一字符串，进行排序        String str = &quot;hello&quot;;        char[] chars = str.toCharArray();        char temp=&apos; &apos;;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://skyurb.cn/2018/07/25/java基础练习题/"/>
+
+
+
+
+
+  <title>java基础练习题 | Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fd96d7515235df7358d327198937ccb8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-读书">
+          <a href="/books/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            读书
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://skyurb.cn/2018/07/25/java基础练习题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="skyurb">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java基础练习题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-25T16:01:31+08:00">
+                2018-07-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/25/java基础练习题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/25/java基础练习题/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-字符串排序"><a href="#1-字符串排序" class="headerlink" title="1.字符串排序"></a>1.字符串排序</h1><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">        <span class="comment">//给定一字符串，进行排序</span></span><br><span class="line">        <span class="keyword">String</span> <span class="built_in">str</span> = <span class="string">"hello"</span>;</span><br><span class="line">        <span class="built_in">char</span>[] chars = <span class="built_in">str</span>.toCharArray();</span><br><span class="line">        <span class="built_in">char</span> temp=<span class="string">' '</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; chars.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">0</span>; j &lt;i ; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (chars[i]&lt;chars[j])&#123;</span><br><span class="line">                   temp=chars[i];</span><br><span class="line">                   chars[i]=chars[j];</span><br><span class="line">                   chars[j]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//第二种方法，利用工具类</span></span><br><span class="line">        Arrays.<span class="built_in">sort</span>(chars);</span><br><span class="line">        System.out.<span class="built_in">println</span>(chars);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="字符串，将其首字母转为大写，后续字母转为小写输出。"><a href="#字符串，将其首字母转为大写，后续字母转为小写输出。" class="headerlink" title="字符串，将其首字母转为大写，后续字母转为小写输出。"></a>字符串，将其首字母转为大写，后续字母转为小写输出。</h1><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">        <span class="comment">//给定任意字符串，将其首字母转为大写，后续字母转为小写输出。</span></span><br><span class="line">        <span class="keyword">String</span> <span class="built_in">str</span>=<span class="string">"helLOBaby"</span>;</span><br><span class="line">        <span class="keyword">String</span> s1 = <span class="built_in">str</span>.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase();</span><br><span class="line">        <span class="keyword">String</span> s2 = <span class="built_in">str</span>.substring(<span class="number">1</span>).toLowerCase();</span><br><span class="line">        System.out.<span class="built_in">println</span>(s1+s2);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="彩票问题"><a href="#彩票问题" class="headerlink" title="彩票问题"></a>彩票问题</h1><blockquote>
+<p>有一个股票价格序列共10天。每天的价格是{4，2，1，3，5，7，5，7，8，8}。规定：3日移动平均价格大于当天价格则买入。请问第一次出现买入信号是第几天，总共出现几次买入信号。<br>提示：3日移动平均是指当前以及以后两天的价格的平均值。</p>
+</blockquote>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">        int arry[]=&#123;<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">8</span>&#125;;</span><br><span class="line">        int days=<span class="number">0</span>;</span><br><span class="line">        int count=<span class="number">0</span>;</span><br><span class="line">        for (int i = <span class="number">0</span>; i &lt; arry.length<span class="number">-2</span>; i++) &#123;</span><br><span class="line">            double avg=(arry[i]+arry[i+<span class="number">1</span>]+arry[i+<span class="number">2</span>])/<span class="number">3.0</span>;</span><br><span class="line">            if (arry[i]&lt;avg)&#123;</span><br><span class="line">                count++;</span><br><span class="line">                if (count==<span class="number">1</span>)&#123;</span><br><span class="line">                    System.out.println(<span class="string">"第"</span>+(i+<span class="number">1</span>)+<span class="string">"天"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"一共出现五次"</span>+count);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="用蒙特卡洛模拟求出圆周率"><a href="#用蒙特卡洛模拟求出圆周率" class="headerlink" title="用蒙特卡洛模拟求出圆周率"></a>用蒙特卡洛模拟求出圆周率</h1><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">double</span> MontePI(<span class="built_in">int</span> n) &#123;</span><br><span class="line">       <span class="keyword">double</span> <span class="literal">PI</span>;</span><br><span class="line">       <span class="keyword">double</span> x, y;</span><br><span class="line">       <span class="built_in">int</span> i, sum;</span><br><span class="line">       sum = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">           x = Math.<span class="built_in">random</span>();</span><br><span class="line">           y = Math.<span class="built_in">random</span>();</span><br><span class="line">           <span class="keyword">if</span> ((x * x + y * y) &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">               sum++;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="literal">PI</span> = <span class="number">4.0</span> * sum / n;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">PI</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">       <span class="built_in">int</span> n;</span><br><span class="line">       <span class="keyword">double</span> <span class="literal">PI</span>;</span><br><span class="line">       System.out.<span class="built_in">println</span>(<span class="string">"蒙特卡洛概率算法计算圆周率:"</span>);</span><br><span class="line">       Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">       System.out.<span class="built_in">println</span>(<span class="string">"输入点的数量："</span>);</span><br><span class="line">       n = input.nextInt();</span><br><span class="line">       <span class="literal">PI</span> = MontePI(n);</span><br><span class="line">       System.out.<span class="built_in">println</span>(<span class="string">"PI="</span>+<span class="literal">PI</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="求出字符不同字母的个数"><a href="#求出字符不同字母的个数" class="headerlink" title="求出字符不同字母的个数"></a>求出字符不同字母的个数</h1><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">       <span class="comment">//求出字符不同字母的个数</span></span><br><span class="line">       <span class="keyword">String</span> <span class="built_in">str</span>=<span class="string">""</span>;</span><br><span class="line">       <span class="keyword">String</span> str3=<span class="string">"hello"</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; str3.length(); i++) &#123;</span><br><span class="line">           <span class="keyword">String</span> ch=str3.substring(i,i+<span class="number">1</span>);</span><br><span class="line">           <span class="keyword">if</span> (!<span class="built_in">str</span>.contains(ch))&#123;</span><br><span class="line">               <span class="built_in">str</span>+=ch;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       System.out.<span class="built_in">println</span>(<span class="built_in">str</span>.length());</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="判断字符串是否对称"><a href="#判断字符串是否对称" class="headerlink" title="判断字符串是否对称"></a>判断字符串是否对称</h1><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">       <span class="comment">//判断字符串是否对称</span></span><br><span class="line">       <span class="built_in">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">       Scanner s = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">       System.out.<span class="built_in">println</span>(<span class="string">"请输入一个字符串"</span>);</span><br><span class="line">       <span class="keyword">String</span> <span class="built_in">str</span> = s.next();</span><br><span class="line">       <span class="built_in">char</span> ch[] = <span class="built_in">str</span>.toCharArray();</span><br><span class="line">       <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; ch.length / <span class="number">2</span>; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (ch[i] != ch[ch.length - i - <span class="number">1</span>]) &#123;</span><br><span class="line">               flag = <span class="keyword">false</span>;</span><br><span class="line">               <span class="keyword">break</span>;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="keyword">continue</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">           System.out.<span class="built_in">println</span>(<span class="string">"yes"</span>);</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           System.out.<span class="built_in">println</span>(<span class="string">"no"</span>);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="创建一个可以无限存放数组的容器"><a href="#创建一个可以无限存放数组的容器" class="headerlink" title="创建一个可以无限存放数组的容器"></a>创建一个可以无限存放数组的容器</h1><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> class MyArryList &#123;</span><br><span class="line">    <span class="comment">//创建一个可以无限存放数组的容器</span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> <span class="built_in">size</span>=<span class="number">16</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span>[] init=<span class="keyword">new</span> <span class="built_in">int</span>[<span class="built_in">size</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> index=<span class="number">0</span>;</span><br><span class="line">    <span class="comment">//从集合中取</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> <span class="built_in">get</span>(<span class="built_in">int</span> index)&#123;</span><br><span class="line">        <span class="keyword">if</span> (index&lt;<span class="number">0</span>)&#123;</span><br><span class="line">            System.out.<span class="built_in">println</span>(<span class="string">"下标不能小于0"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> init[index];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="built_in">add</span>(<span class="built_in">int</span> num)&#123;</span><br><span class="line">       <span class="keyword">if</span> (index&gt;<span class="built_in">size</span>*<span class="number">0.75</span>)&#123;</span><br><span class="line">           <span class="built_in">size</span>*=<span class="number">2</span>;</span><br><span class="line">           <span class="comment">//创建两倍大小数组</span></span><br><span class="line">           <span class="built_in">int</span> []newArry=<span class="keyword">new</span> <span class="built_in">int</span>[<span class="built_in">size</span>];</span><br><span class="line">           <span class="comment">//遍历老数组,复制到新数组中</span></span><br><span class="line">           <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; init.length; i++) &#123;</span><br><span class="line">               newArry[i]=init[i];</span><br><span class="line">           &#125;</span><br><span class="line">           init=newArry;</span><br><span class="line">       &#125;</span><br><span class="line">       init[index]=num;</span><br><span class="line">       index++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">        MyArryList myArryList = <span class="keyword">new</span> MyArryList();</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt;<span class="number">200</span> ; i++) &#123;</span><br><span class="line">            myArryList.<span class="built_in">add</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.<span class="built_in">println</span>(myArryList.<span class="built_in">get</span>(<span class="number">18</span>));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="链表的实现原理"><a href="#链表的实现原理" class="headerlink" title="链表的实现原理"></a>链表的实现原理</h1><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">    <span class="comment">//存放数据</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> <span class="keyword">date</span>;</span><br><span class="line">    <span class="comment">//指向下一个节点个引用</span></span><br><span class="line">    <span class="keyword">private</span> Node next;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> getDate() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">date</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> setDate(<span class="keyword">int</span> <span class="keyword">date</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.<span class="keyword">date</span> = <span class="keyword">date</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Node getNext() &#123;</span><br><span class="line">        <span class="keyword">return</span> next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> setNext(Node next) &#123;</span><br><span class="line">        <span class="keyword">this</span>.next = next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">public class MyLinkList &#123;</span><br><span class="line"></span><br><span class="line">    private <span class="keyword">Node</span> <span class="title">head</span>=new <span class="keyword">Node</span><span class="title">();</span></span><br><span class="line"><span class="title">    private</span> <span class="keyword">Node</span> <span class="title">tail</span>=head;</span><br><span class="line">    //定义存放数据方法</span><br><span class="line">    public void add(int num)&#123;</span><br><span class="line">        //创建一个节点，将数据填充到节点，将尾部节点指向新创建的节点</span><br><span class="line">        <span class="keyword">Node</span> <span class="title">node</span>=new <span class="keyword">Node</span><span class="title">();</span></span><br><span class="line"><span class="title">        //将数据填充节点</span></span><br><span class="line"><span class="title">        node</span>.setDate(num);</span><br><span class="line">        //然后将</span><br><span class="line">       // <span class="keyword">Node</span> <span class="title">next</span>=tail.getNext();</span><br><span class="line">       tail.setNext(<span class="keyword">node</span><span class="title">);</span></span><br><span class="line"><span class="title">        tail</span>=<span class="keyword">node</span><span class="title">;</span></span><br><span class="line"><span class="title">    &#125;</span></span><br><span class="line"><span class="title">    //定义get</span>方法</span><br><span class="line">    public int get(int index)&#123;</span><br><span class="line">        <span class="keyword">Node</span> <span class="title">target</span>=head;</span><br><span class="line">        for (int i = <span class="number">0</span>; i <span class="tag">&lt; index+1; i++) &#123;</span></span><br><span class="line"><span class="tag">            target=target.getNext();</span></span><br><span class="line"><span class="tag">        &#125;</span></span><br><span class="line"><span class="tag">        return target.getDate();</span></span><br><span class="line"><span class="tag">    &#125;</span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">    public static void main(String[] args) &#123;</span></span><br><span class="line"><span class="tag">        MyLinkList myLinkList = new MyLinkList();</span></span><br><span class="line"><span class="tag">        for (int i = 0; i &lt; 100; i++) &#123;</span></span><br><span class="line"><span class="tag">            myLinkList.add(i);</span></span><br><span class="line"><span class="tag">        &#125;</span></span><br><span class="line"><span class="tag">        System.out.println(myLinkList.get(5));</span></span><br><span class="line"><span class="tag">    &#125;</span></span><br><span class="line"><span class="tag">&#125;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+	
+	<div>
+  
+    
+  
+</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/23/git学习/" rel="next" title="git学习">
+                <i class="fa fa-chevron-left"></i> git学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b49955d5fe2de9d" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="skyurb" />
+            
+              <p class="site-author-name" itemprop="name">skyurb</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/skyurb" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:skyurber@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yourname" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/3282492770" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/you-da-yang-5/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/10069495/skyurb" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/qq_38384971" title="cnds" target="_blank">cnds</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.uisdc.com/" title="优设" target="_blank">优设</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-字符串排序"><span class="nav-number">1.</span> <span class="nav-text">1.字符串排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串，将其首字母转为大写，后续字母转为小写输出。"><span class="nav-number">2.</span> <span class="nav-text">字符串，将其首字母转为大写，后续字母转为小写输出。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#彩票问题"><span class="nav-number">3.</span> <span class="nav-text">彩票问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用蒙特卡洛模拟求出圆周率"><span class="nav-number">4.</span> <span class="nav-text">用蒙特卡洛模拟求出圆周率</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#求出字符不同字母的个数"><span class="nav-number">5.</span> <span class="nav-text">求出字符不同字母的个数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#判断字符串是否对称"><span class="nav-number">6.</span> <span class="nav-text">判断字符串是否对称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建一个可以无限存放数组的容器"><span class="nav-number">7.</span> <span class="nav-text">创建一个可以无限存放数组的容器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链表的实现原理"><span class="nav-number">8.</span> <span class="nav-text">链表的实现原理</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">skyurb</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+  <!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+-->
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共7.3k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'cUjdabTLArABdR7CK1yFWpwN-gzGzoHsz',
+        appKey: '4F3G1XlqAMrE65c0q6iEhQcf',
+        placeholder: 'ヾﾉ≧∀≦)o Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
