@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="java基础易错知识整理数组初始值下面代码输出结果是0 1234public static void main(String[] args) &amp;#123;             int[] arry=new int[10];             Sysout.out.println(arr[i]);             &amp;#125; –int类型：0 –short类型：(short）0">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-21T08:36:07.196Z">
+<meta property="og:updated_time" content="2018-07-27T06:42:25.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础笔记整理">
 <meta name="twitter:description" content="java基础易错知识整理数组初始值下面代码输出结果是0 1234public static void main(String[] args) &amp;#123;             int[] arry=new int[10];             Sysout.out.println(arr[i]);             &amp;#125; –int类型：0 –short类型：(short）0">
@@ -368,7 +368,7 @@
 <p>–doulbe类型：0.0d</p>
 <p>–float类型：0.0f</p>
 <p>–char类型：\u0000（空格字符）</p>
-<p>–boolean类型：false<br>–引用类型的数组在创建之后，赋默认值null<br><a id="more"></a></p>
+<p>–boolean类型：false<br>–引用类型的数组在创建之后，赋默认值null，初始化后，int型默认值为0<br><a id="more"></a></p>
 <h2 id="throw和throws的区别"><a href="#throw和throws的区别" class="headerlink" title="throw和throws的区别"></a>throw和throws的区别</h2><p>抛出异常有三种形式，一是throw,一个throws，还有一种系统自动抛异常。下面它们之间的异同</p>
 <ol>
 <li><p>当程序语句出现一些逻辑错误、主义错误或类型转换错误时，系统会自动抛出异常</p>
@@ -384,10 +384,10 @@
 <p>当某个方法可能会抛出某种异常时用于throws 声明可能抛出的异常，然后交给上层调用它的方法程序处理</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> class <span class="title">testThrows</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">function</span><span class="params">()</span> <span class="keyword">throws</span> NumberFormatException</span>&#123; </span><br><span class="line">String s = <span class="string">"abc"</span>; </span><br><span class="line">System.out.println(Double.parseDouble(s)); </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; </span><br><span class="line"><span class="keyword">try</span> &#123; </span><br><span class="line">function(); </span><br><span class="line">&#125; <span class="keyword">catch</span> (NumberFormatException e) &#123; </span><br><span class="line">System.err.println(<span class="string">"非数据类型不能强制类型转换。"</span>); </span><br><span class="line"><span class="comment">//e.printStackTrace(); </span></span><br><span class="line">&#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>throw与throws的比较<br>1、throws出现在方法函数头；而throw出现在函数体。<br>2、throws表示出现异常的一种可能性，并不一定会发生这些异常；throw则是抛出了异常，执行throw则一定抛出了某种异常对象。<br>3、两者都是消极处理异常的方式（这里的消极并不是说这种方式不好），只是抛出或者可能抛出异常，但是不会由函数去处理异常，真正的处理异常由函数的上层调用处理。<br><em>参考自 ：</em><a href="https://blog.csdn.net/hjfcgt123/article/details/53349275" target="_blank" rel="noopener">https://blog.csdn.net/hjfcgt123/article/details/53349275</a></p>
-<h2 id="堆溢出和栈溢出"><a href="#堆溢出和栈溢出" class="headerlink" title="堆溢出和栈溢出"></a>堆溢出和栈溢出</h2><ol>
+<h2 id="堆溢出和栈溢出"><a href="#堆溢出和栈溢出" class="headerlink" title="堆溢出和栈溢出"></a>堆溢出和栈溢出</h2><ul>
 <li>栈溢出(StackOverflowError)</li>
-<li>堆溢出(OutOfMemoryError:java heap space)<br>先了解一下java中的堆和栈，JAVA在程序运行时，在内存中划分5片空间进行数据的存储。分别是：1：寄存器。2：本地方法区。3：方法区。4：栈。5：堆。</li>
-</ol>
+<li>堆溢出(OutOfMemoryError:java heap space)<br>先了解一下java中的堆和栈，JAVA在程序运行时，在内存中划分5片空间进行数据的存储。分别是：<br>1：寄存器。<br>2：本地方法区。<br>3：方法区。<br>4：栈。<br>5：堆。</li>
+</ul>
 <p>基本数据类型、局部变量都是存放在栈内存中的，用完就消失。<br>new创建的实例化对象及数组，是存放在堆内存中的，用完之后靠垃圾回收机制不定期自动消除。举个例子<br>ArrayList list = new ArrayList();</p>
 <p>实际上，在创建完上面的一个对象后，在JVM中，会把new出来的对象存放在堆内存中，</p>
 <p>同时，在方法栈中存放着对象的引用关系。</p>
@@ -563,7 +563,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -733,7 +733,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.3k字</span>
+  <span class="post-count">博客全站共14.8k字</span>
 </div>
 
 
