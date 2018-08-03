@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="多线程有什么用？ 发挥多核CPU的优势  随着工业的进步，现在的笔记本、台式机乃至商用的应用服务器至少也都是双核的，4核、8核甚至16核的也都不少见，如果是单线程的程序，那么在双核CPU上就浪费了50%，在4核CPU上就浪费了75%。单核CPU上所谓的”多线程”那是假的多线程，同一时间处理器只会处理一段逻辑，只不过线程之间切换得比较快，看着像多个线程”同时”运行罢了。多核CPU上的多线程才是真正的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-30T14:01:39.554Z">
+<meta property="og:updated_time" content="2018-08-03T03:06:23.719Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="40个多线程问题总结">
 <meta name="twitter:description" content="多线程有什么用？ 发挥多核CPU的优势  随着工业的进步，现在的笔记本、台式机乃至商用的应用服务器至少也都是双核的，4核、8核甚至16核的也都不少见，如果是单线程的程序，那么在双核CPU上就浪费了50%，在4核CPU上就浪费了75%。单核CPU上所谓的”多线程”那是假的多线程，同一时间处理器只会处理一段逻辑，只不过线程之间切换得比较快，看着像多个线程”同时”运行罢了。多核CPU上的多线程才是真正的">
@@ -509,7 +509,7 @@
 <p>b）假如是业务时间长集中在计算操作上，也就是计算密集型任务，这个就没办法了，和（1）一样吧，线程池中的线程数设置得少一些，减少线程上下文的切换</p>
 <p>（3）并发高、业务执行时间长，解决这种类型任务的关键不在于线程池而在于整体架构的设计，看看这些业务里面某些数据是否能做缓存是第一步，增加服务器是第二步，至于线程池的设置，设置参考（2）。最后，业务执行时间长的问题，也可能需要分析一下，看看能不能使用中间件对任务进行拆分和解耦。</p>
 <hr>
-<p><em>转载自 </em><a href="https://www.cnblogs.com/Java3y/p/8999199.html" target="_blank" rel="noopener">https://www.cnblogs.com/Java3y/p/8999199.html</a></p>
+<p><em>转载自： </em><a href="https://www.cnblogs.com/xrq730/p/5060921.html" target="_blank" rel="noopener">https://www.cnblogs.com/xrq730/p/5060921.html</a></p>
 
       
     </div>
