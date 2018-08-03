@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://skyurb.cn/"/>
-  <updated>2018-08-03T03:06:23.719Z</updated>
+  <updated>2018-08-03T13:14:43.510Z</updated>
   <id>http://skyurb.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java基础笔记整理一</title>
+    <link href="http://skyurb.cn/2018/08/03/java%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E4%B8%80/"/>
+    <id>http://skyurb.cn/2018/08/03/java基础笔记整理一/</id>
+    <published>2018-08-03T09:10:57.000Z</published>
+    <updated>2018-08-03T13:14:43.510Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Comparator和Comparable接口的区别"><a href="#Comparator和Comparable接口的区别" class="headerlink" title="Comparator和Comparable接口的区别"></a>Comparator和Comparable接口的区别</h1><p>java中，对集合对象或者数组对象排序，有两种实现方式。</p><ul><li>对象实现Comparable 接口</li><li>定义比较器，实现Comparator接口<h2 id="Comparable"><a href="#Comparable" class="headerlink" title="Comparable"></a>Comparable</h2>Comparable可以认为是一个内比较器，实现了Comparable接口的类有一个特点，就是这些类是可以和自己比较的，至于具体和另一个实现了Comparable接口的类如何比较，则依赖compareTo方法的实现，compareTo方法也被称为自然比较方法。如果开发者add进入一个Collection的对象想要Collections的sort方法帮你自动进行排序的话，那么这个对象必须实现Comparable接口。compareTo方法的返回值是int，有三种情况：1、比较者大于被比较者（也就是compareTo方法里面的对象），那么返回正整数2、比较者等于被比较者，那么返回03、比较者小于被比较者，那么返回负整数<h2 id="Comparator"><a href="#Comparator" class="headerlink" title="Comparator"></a>Comparator</h2>Comparator可以认为是是一个外比较器，个人认为有两种情况可以使用实现Comparator接口的方式：1、一个对象不支持自己和自己比较（没有实现Comparable接口），但是又想对两个对象进行比较2、一个对象实现了Comparable接口，但是开发者认为compareTo方法中的比较方式并不是自己想要的那种比较方式Comparator接口里面有一个compare方法，方法有两个参数T o1和T o2，是泛型的表示方式，分别表示待比较的两个对象，方法返回值和Comparable接口一样是int，有三种情况：1、o1大于o2，返回正整数2、o1等于o2，返回03、o1小于o3，返回负整数<h1 id="在使用hashmap时为何要重写key的hashcode和equals方法"><a href="#在使用hashmap时为何要重写key的hashcode和equals方法" class="headerlink" title="在使用hashmap时为何要重写key的hashcode和equals方法"></a>在使用hashmap时为何要重写key的hashcode和equals方法</h1>Java中的超类Object类中定义的equals()方法是用来比较两个引用所指向的对象的内存地址是否一致<br>重点要注意的是：</li><li>在java应用程序运行时，无论何时多次调用同一个对象时的hsahCode()方法，这个对象的hashCode()方法的返回值必须是相同的一个int值</li><li>如果两个对象equals()返回值为true,则他们的hashCode()也必须返回相同的int值</li><li>如果两个对象equals()返回值为false,则他们的hashCode()返回值也必须不同<br>我们在定义类时，我们经常会希望两个不同对象的某些属性值相同时就认为他们相同，所以我们要重写equals()方法，按照原则，我们重写了equals()方法，也要重写hashCode()方法</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Comparator和Comparable接口的区别&quot;&gt;&lt;a href=&quot;#Comparator和Comparable接口的区别&quot; class=&quot;headerlink&quot; title=&quot;Comparator和Comparable接口的区别&quot;&gt;&lt;/a&gt;Comparat
+      
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://skyurb.cn/categories/JAVA/"/>
+    
+    
+      <category term="java" scheme="http://skyurb.cn/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>40个多线程问题总结</title>
