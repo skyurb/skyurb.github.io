@@ -97,7 +97,7 @@
 <meta property="og:description" content="简介 Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。   Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。   Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/c3a6dd62gy1ftnh7wdvmtj20cn05ajre.jpg">
-<meta property="og:updated_time" content="2018-07-26T11:15:13.726Z">
+<meta property="og:updated_time" content="2018-08-04T09:17:49.321Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git学习">
 <meta name="twitter:description" content="简介 Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。   Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。   Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。">
@@ -325,6 +325,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -384,8 +406,79 @@
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--list</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>检查版本</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="comment">--version</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p>什么是版本库？版本库又名仓库，英文名repository,你可以简单的理解一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改，删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻还可以将文件”还原”。</p>
+<ul>
+<li><p>首先创建一个目录（比如在e盘创建一个目录gittest）</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> e:</span><br><span class="line"><span class="built_in">mkdir</span> gittest</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过命令 git init 把这个目录变成git可以管理的仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> gittest</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这时候你当前gittest目录下会多了一个.git的目录，这个目录是Git来跟踪管理版本的，没事千万不要手动乱改这个目录里面的文件，否则，会把git仓库给破坏了.</p>
+<h3 id="把文件添加到版本库中"><a href="#把文件添加到版本库中" class="headerlink" title="把文件添加到版本库中"></a>把文件添加到版本库中</h3><p>首先要明确下，所有的版本控制系统，只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码等，Git也不列外，版本控制系统可以告诉你每次的改动，但是图片，视频这些二进制文件，虽能也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是知道图片从1kb变成2kb，但是到底改了啥，版本控制也不知道<br>-使用命令 git add read.txt添加到暂存区里面去<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch <span class="built_in">read</span>.txt</span><br><span class="line">git <span class="built_in">add</span> <span class="built_in">read</span>.txt</span><br></pre></td></tr></table></figure></p>
+<p>没有任何提示，说明已经添加成功了<br>-用命令 git commit告诉Git，把文件提交到仓库<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">commit</span> -m <span class="string">'read.txt提交'</span></span><br><span class="line">[<span class="keyword">master</span> (root-<span class="keyword">commit</span>) ba2c0c8] read.txt提交</span><br><span class="line"><span class="number">1</span> <span class="keyword">file</span> <span class="keyword">changed</span>, <span class="number">0</span> insertions(+), <span class="number">0</span> deletions(-)</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">mode</span> <span class="number">100644</span> read.txt</span><br></pre></td></tr></table></figure></p>
+<p>git commit后面跟的是提交的注释<br>我们可以通过命令git status来查看是否还有文件未提交<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">//结果</span><br><span class="line">On branch <span class="literal">master</span></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure></p>
+<p>说明没有任何文件未提交，但是我现在继续来改下read.txt内容，比如我在下面添加一行hello内容，继续使用git status来查看下结果<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">vi</span> <span class="keyword">read</span>.txt</span><br><span class="line">//在<span class="keyword">vi</span>编辑器插入hello</span><br><span class="line">git status</span><br><span class="line">//结果如下</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commi<span class="variable">t:</span></span><br><span class="line">(use <span class="string">"git add &lt;file&gt;..."</span> <span class="keyword">to</span> <span class="keyword">update</span> what will <span class="keyword">be</span> committed)</span><br><span class="line">(use <span class="string">"git checkout -- &lt;file&gt;..."</span> <span class="keyword">to</span> discard <span class="keyword">changes</span> in working directory)</span><br><span class="line">modified:   <span class="keyword">read</span>.txt</span><br><span class="line"></span><br><span class="line"><span class="keyword">no</span> <span class="keyword">changes</span> added <span class="keyword">to</span> commit (use <span class="string">"git add"</span> <span class="built_in">and</span>/<span class="built_in">or</span> <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>上面的命令告诉我们 reae.txt文件已被修改，但是未被提交的修改。<br>想看下read.txt文件到底改了什么内容可以用git diff read.txt<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   git diff read.txt</span><br><span class="line">   <span class="comment">//结果如下</span></span><br><span class="line">warning: LF will be replaced by CRLF <span class="keyword">in</span> read<span class="selector-class">.txt</span>.</span><br><span class="line">The file will have its original line endings <span class="keyword">in</span> your working directory.</span><br><span class="line">diff --git a/read<span class="selector-class">.txt</span> b/read.txt</span><br><span class="line">index e69de29.<span class="selector-class">.ce01362</span> <span class="number">100644</span></span><br><span class="line">--- a/read.txt</span><br><span class="line">+++ b/read.txt</span><br><span class="line">@@ -<span class="number">0</span>,<span class="number">0</span> +<span class="number">1</span> @@</span><br><span class="line">+hello</span><br></pre></td></tr></table></figure></p>
+<p>可以看到，read.txt文件内容从没有改成一行添加了一行hello内容<br>知道了对read.txt文件做了什么修改后，我们可以放心的提交到仓库了，提交修改和提交文件是一样的2步(第一步是git add  第二步是：git commit)<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   git commit -m '<span class="keyword">read</span>.txt提交增加hello'</span><br><span class="line">//结果</span><br><span class="line">[<span class="keyword">master</span> <span class="title">f4dd0e7</span>] <span class="keyword">read</span>.txt提交增加hello</span><br><span class="line"> <span class="number">1</span> file changed, <span class="number">1</span> insertion(+)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>版本回退<br>现在我继续对readme.txt文件进行修改，再增加一行world<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   git commit -m '<span class="keyword">read</span>.txt提交增加world'</span><br><span class="line">//结果</span><br><span class="line">[<span class="keyword">master</span> <span class="title">f4dd0e7</span>] <span class="keyword">read</span>.txt提交增加world</span><br><span class="line"> <span class="number">1</span> file changed, <span class="number">1</span> insertion(+)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>现在我已经对read.txt文件做了三次修改了，那么我现在想查看下历史记录，可以使用命令 git log ：<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">   git log</span><br><span class="line"><span class="comment">//结果</span></span><br><span class="line">commit <span class="number">64</span>a95f6216fa491fcd0517764c18168c5db0725e (HEAD -&gt; master)</span><br><span class="line"><span class="symbol">Author:</span> skyurb <span class="params">&lt;<span class="number">2864814961</span>@qq.com&gt;</span></span><br><span class="line"><span class="symbol">Date:</span>   Sat Aug <span class="number">4</span> <span class="number">11</span>:<span class="number">37</span>:<span class="number">26</span> <span class="number">2018</span> +<span class="number">0800</span></span><br><span class="line"></span><br><span class="line">   read.txt提交增加world</span><br><span class="line"></span><br><span class="line">commit f4dd0e7e782c60948526fafbf1283c57c435b95d</span><br><span class="line"><span class="symbol">Author:</span> skyurb <span class="params">&lt;<span class="number">2864814961</span>@qq.com&gt;</span></span><br><span class="line"><span class="symbol">Date:</span>   Sat Aug <span class="number">4</span> <span class="number">11</span>:<span class="number">34</span>:<span class="number">34</span> <span class="number">2018</span> +<span class="number">0800</span></span><br><span class="line"></span><br><span class="line">   read.txt提交增加hello</span><br><span class="line"></span><br><span class="line">commit ba2c0c83e1930b0a16125d10ebed7fee2ce6ba02</span><br><span class="line"><span class="symbol">Author:</span> skyurb <span class="params">&lt;<span class="number">2864814961</span>@qq.com&gt;</span></span><br><span class="line"><span class="symbol">Date:</span>   Sat Aug <span class="number">4</span> <span class="number">11</span>:<span class="number">19</span>:<span class="number">45</span> <span class="number">2018</span> +<span class="number">0800</span></span><br><span class="line"></span><br><span class="line">   read.txt提交</span><br></pre></td></tr></table></figure></p>
+<p>git log命令显示从最近到最远的显示日志，我们可以看到最近三次提交记录，如果嫌上面显示的信息太多的话，我们可以使用命令 git log –pretty=oneline </p>
+<p>现在我想使用版本回退操作，我想把当前的版本回退到上一个版本，要使用什么命令呢？可以使用如下2种命令，第一种是：git reset  –hard HEAD^ 那么如果要回退到上上个版本只需把HEAD^ 改成 HEAD^^ 以此类推。那如果要回退到前100个版本的话，使用上面的方法肯定不方便，我们可以使用下面的简便命令操作：git reset  –hard HEAD~100 即可<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   git reset <span class="comment">--hard HEAD^</span></span><br><span class="line">  <span class="comment"> //结果</span></span><br><span class="line">   HEAD is now <span class="keyword">at</span> f4dd0e7 <span class="built_in">read</span>.txt提交增加hello</span><br><span class="line">cat <span class="built_in">read</span>.txt</span><br><span class="line">  <span class="comment"> //结果</span></span><br><span class="line">hello</span><br></pre></td></tr></table></figure></p>
+<p>我们再用cat查看就只剩hello了，增加的world内容我们看不到了，但是现在我想回退到最新的版本，如：有world的内容要如何恢复呢？我们可以通过版本号回退，使用命令方法如下：git reset  –hard 版本号 ，<br>但是现在的问题假如我已经关掉过一次命令行或者333内容的版本号我并不知道呢？要如何知道增加world内容的版本号呢？可以通过如下命令即可获取到版本号：git reflog  演示如下：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">git</span> <span class="selector-tag">reflog</span></span><br><span class="line">   <span class="comment">//结果</span></span><br><span class="line"><span class="selector-tag">f4dd0e7</span> (HEAD -&gt; master) <span class="selector-tag">HEAD</span><span class="variable">@&#123;0&#125;</span>: <span class="selector-tag">reset</span>: <span class="selector-tag">moving</span> <span class="selector-tag">to</span> <span class="selector-tag">HEAD</span>^</span><br><span class="line"><span class="selector-tag">64a95f6</span> <span class="selector-tag">HEAD</span><span class="variable">@&#123;1&#125;</span>: <span class="selector-tag">commit</span>: <span class="selector-tag">read</span><span class="selector-class">.txt</span>提交增加<span class="selector-tag">world</span></span><br><span class="line"><span class="selector-tag">f4dd0e7</span> (HEAD -&gt; master) <span class="selector-tag">HEAD</span><span class="variable">@&#123;2&#125;</span>: <span class="selector-tag">commit</span>: <span class="selector-tag">read</span><span class="selector-class">.txt</span>提交增加<span class="selector-tag">hello</span></span><br><span class="line"><span class="selector-tag">ba2c0c8</span> <span class="selector-tag">HEAD</span><span class="variable">@&#123;3&#125;</span>: <span class="selector-tag">commit</span> (initial): <span class="selector-tag">read</span><span class="selector-class">.txt</span>提交</span><br></pre></td></tr></table></figure></p>
+<p>通过上面的显示我们可以知道，增加内容world的版本号是 64a95f6.我们现在可以命令git reset  –hard 64a95f6来恢复了<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">reset</span>  <span class="comment">--hard 64a95f6</span></span><br><span class="line"><span class="keyword">HEAD</span> <span class="keyword">is</span> <span class="keyword">now</span> <span class="keyword">at</span> <span class="number">64</span>a95f6 read.txt提交增加world</span><br></pre></td></tr></table></figure></p>
+<p>这时，又恢复到原来有world的版本</p>
+<h3 id="理解工作区与暂存区的区别"><a href="#理解工作区与暂存区的区别" class="headerlink" title="理解工作区与暂存区的区别"></a>理解工作区与暂存区的区别</h3><ul>
+<li>工作区：就是你在电脑上看到的目录，比如目录下gittest里的文件(.git隐藏目录版本库除外)。或者以后需要再新建的目录文件等等都属于工作区范畴。</li>
+<li>版本库(Repository)：工作区有一个隐藏目录.git,这个不属于工作区，这是版本库。其中版本库里面存了很多东西，其中最重要的就是stage(暂存区)，还有Git为我们自动创建了第一个分支master,以及指向master的一个指针HEAD。<br>我们前面说过使用Git提交文件到版本库有两步：</li>
+</ul>
+<ol>
+<li>是使用 git add 把文件添加进去，实际上就是把文件添加到暂存区。</li>
+<li>使用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支上。<h3 id="Git撤销修改和删除文件操作"><a href="#Git撤销修改和删除文件操作" class="headerlink" title="Git撤销修改和删除文件操作"></a>Git撤销修改和删除文件操作</h3>如果我又在read.txt文件里面加一行 good morning，但在未提交之前发现提交的内容有误，所以我要马上恢复以前的版本，现在有两种方法：</li>
+</ol>
+<ul>
+<li><p>如果我知道要删掉那些内容的话，直接手动更改去掉那些需要的文件，然后add添加到暂存区，最后commit掉。</p>
+</li>
+<li><p>我可以按以前的方法直接恢复到上一个版本。使用 git reset  –hard HEAD^<br>但是现在我不想使用上面的2种方法，我想直接想使用撤销命令该如何操作呢？首先在做撤销之前，我们可以先用 git status 查看下当前的状态。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   git status</span><br><span class="line">//结果</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged for <span class="keyword">commit</span>:</span><br><span class="line">  (<span class="keyword">use</span> <span class="string">"git add &lt;file&gt;..."</span> <span class="keyword">to</span> <span class="keyword">update</span> what will be committed)</span><br><span class="line">  (<span class="keyword">use</span> <span class="string">"git checkout -- &lt;file&gt;..."</span> <span class="keyword">to</span> discard changes <span class="keyword">in</span> working <span class="keyword">directory</span>)</span><br><span class="line"></span><br><span class="line">        modified:   read.txt</span><br><span class="line"></span><br><span class="line"><span class="keyword">no</span> changes added <span class="keyword">to</span> <span class="keyword">commit</span> (<span class="keyword">use</span> <span class="string">"git add"</span> <span class="keyword">and</span>/<span class="keyword">or</span> <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>可以发现，Git会告诉你，git checkout  – file 可以丢弃工作区的修改<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- read.txt</span><br><span class="line">cat read.txt</span><br><span class="line">hello</span><br><span class="line">world</span><br></pre></td></tr></table></figure></p>
+<p>发现后面的内容就没有了，命令 git checkout –read.txt 意思就是，把read.txt文件在工作区做的修改全部撤销，这里有2种情况</p>
+<ul>
+<li><p>read.txt自动修改后，还没有放到暂存区，使用 撤销修改就回到和版本库一模一样的状态。</p>
+</li>
+<li><p>另外一种是readme.txt已经放入暂存区了，接着又作了修改，撤销修改就回到添加暂存区后的状态。<br><strong>注意：命令git checkout – readme.txt 中的 – 很重要，如果没有 – 的话，那么命令变成创建分支了。</strong></p>
+</li>
+<li>删除文件<br>假如我现在版本库gittest目录添加一个文件book.txt,然后提交<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    git status</span><br><span class="line">	//结果</span><br><span class="line">	On branch master</span><br><span class="line">	Changes not staged for <span class="keyword">commit</span>:</span><br><span class="line">  (<span class="keyword">use</span> <span class="string">"git add/rm &lt;file&gt;..."</span> <span class="keyword">to</span> <span class="keyword">update</span> what will be committed)</span><br><span class="line">  (<span class="keyword">use</span> <span class="string">"git checkout -- &lt;file&gt;..."</span> <span class="keyword">to</span> discard changes <span class="keyword">in</span> working <span class="keyword">directory</span>)</span><br><span class="line"></span><br><span class="line">        deleted:    book.txt</span><br><span class="line"></span><br><span class="line"><span class="keyword">no</span> changes added <span class="keyword">to</span> <span class="keyword">commit</span> (<span class="keyword">use</span> <span class="string">"git add"</span> <span class="keyword">and</span>/<span class="keyword">or</span> <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>一般情况下，可以直接在文件目录中把文件删了，或者使用如上rm命令：rm book.txt ，如果我想彻底从版本库中删掉了此文件的话，可以再执行commit命令 提交掉。<br>只要没有commit之前，如果我想在版本库中恢复此文件。可以使用如下命令 <code>git checkout  -- book.txt</code><br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="comment">-- book.txt</span></span><br></pre></td></tr></table></figure></p>
+<p>这样被删掉的文件就能恢复了</p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><ol>
+<li>先注册github账号，由于你的本地Git仓库和github仓库之间的传输是通过SSH加密的，所以需要一点设置。<br>创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果有的话，直接跳过此如下命令，如果没有的话，打开命令行，输入如下命令：<br><code>ssh-keygen  -t rsa –C “youremail@example.com”,</code> id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人</li>
+<li>登录github,打开” settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容。点击 Add Key，你就应该可以看到已经添加的key</li>
+</ol>
+<h3 id="如何添加远程库"><a href="#如何添加远程库" class="headerlink" title="如何添加远程库"></a>如何添加远程库</h3><p>现在的情景是：我们已经在本地创建了一个Git仓库后，又想在github创建一个Git仓库，并且希望这两个仓库进行远程同步，这样github的仓库可以作为备份，又可以其他人通过该仓库来协作</p>
+<ul>
+<li>首先，登录github上，然后在右上角找到“create a new repo”创建一个新的仓库</li>
+<li>在Repository name填入你的仓库名，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库</li>
+<li>目前，在GitHub上的这个testgit仓库还是空的，GitHub告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    git remote <span class="built_in">add</span> origin http<span class="variable">s:</span>//github.<span class="keyword">com</span>/skyurb/gittest.git</span><br><span class="line">    //然后执行</span><br><span class="line">    git push -<span class="keyword">u</span> origin master</span><br><span class="line">    //结果</span><br><span class="line">Enumerating object<span class="variable">s:</span> <span class="number">11</span>, done.</span><br><span class="line">Counting object<span class="variable">s:</span> <span class="number">100</span>% (<span class="number">11</span>/<span class="number">11</span>), done.</span><br><span class="line">Delta compression using <span class="keyword">up</span> <span class="keyword">to</span> <span class="number">4</span> threads.</span><br><span class="line">Compressing object<span class="variable">s:</span> <span class="number">100</span>% (<span class="number">5</span>/<span class="number">5</span>), done.</span><br><span class="line">Writing object<span class="variable">s:</span> <span class="number">100</span>% (<span class="number">11</span>/<span class="number">11</span>), <span class="number">934</span> bytes | <span class="number">934.00</span> KiB/s, done.</span><br><span class="line">Total <span class="number">11</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">To http<span class="variable">s:</span>//github.<span class="keyword">com</span>/skyurb/gittest.git</span><br><span class="line"> * [<span class="keyword">new</span> branch]      master -&gt; master</span><br><span class="line">Branch <span class="string">'master'</span> <span class="keyword">set</span> <span class="keyword">up</span> <span class="keyword">to</span> track remote branch <span class="string">'master'</span> from <span class="string">'origin'</span>.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。<br>由于远程库是空的，我们第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。推送成功后，可以立刻在github页面中看到远程库的内容已经和本地一模一样了<br>从现在起，只要本地作了提交，就可以通过如下命令：</p>
+<p><code>git push origin master</code><br>把本地master分支的最新修改推送到github上了，现在你就拥有了真正的分布式版本库了</p>
+<h3 id="如何从远程库克隆"><a href="#如何从远程库克隆" class="headerlink" title="如何从远程库克隆"></a>如何从远程库克隆</h3><p>假如远程库有新的内容了，我想克隆到本地来 如何克隆<br>使用命令git clone克隆一个本地库<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="string">https:</span><span class="comment">//github.com/skyurb/gittest</span></span><br><span class="line">Cloning into <span class="string">'gitskills'</span>...</span><br><span class="line"><span class="string">remote:</span> Counting <span class="string">objects:</span> <span class="number">3</span>, done.</span><br><span class="line"><span class="string">remote:</span> Total <span class="number">3</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>), pack-reused <span class="number">3</span></span><br><span class="line">Receiving <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">3</span>/<span class="number">3</span>), done</span><br></pre></td></tr></table></figure></p>
+<p>就可以再本地看了</p>
+<hr>
+<p><em>参考自廖雪峰官网 ：</em><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></p>
 
       
     </div>
@@ -524,7 +617,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -535,7 +628,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -640,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建版本库"><span class="nav-number">4.1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把文件添加到版本库中"><span class="nav-number">4.2.</span> <span class="nav-text">把文件添加到版本库中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解工作区与暂存区的区别"><span class="nav-number">4.3.</span> <span class="nav-text">理解工作区与暂存区的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git撤销修改和删除文件操作"><span class="nav-number">4.4.</span> <span class="nav-text">Git撤销修改和删除文件操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">5.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何添加远程库"><span class="nav-number">5.1.</span> <span class="nav-text">如何添加远程库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何从远程库克隆"><span class="nav-number">5.2.</span> <span class="nav-text">如何从远程库克隆</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -690,7 +783,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.4k字</span>
+  <span class="post-count">博客全站共19.5k字</span>
 </div>
 
 

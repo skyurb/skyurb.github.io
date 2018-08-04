@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="Comparator和Comparable接口的区别java中，对集合对象或者数组对象排序，有两种实现方式。  对象实现Comparable 接口 定义比较器，实现Comparator接口ComparableComparable可以认为是一个内比较器，实现了Comparable接口的类有一个特点，就是这些类是可以和自己比较的，至于具体和另一个实现了Comparable接口的类如何比较，则依赖com">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-04T01:47:53.354Z">
+<meta property="og:updated_time" content="2018-08-04T03:00:09.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础笔记整理一">
 <meta name="twitter:description" content="Comparator和Comparable接口的区别java中，对集合对象或者数组对象排序，有两种实现方式。  对象实现Comparable 接口 定义比较器，实现Comparator接口ComparableComparable可以认为是一个内比较器，实现了Comparable接口的类有一个特点，就是这些类是可以和自己比较的，至于具体和另一个实现了Comparable接口的类如何比较，则依赖com">
@@ -392,8 +392,16 @@
 <ul>
 <li>在java应用程序运行时，无论何时多次调用同一个对象时的hsahCode()方法，这个对象的hashCode()方法的返回值必须是相同的一个int值</li>
 <li>如果两个对象equals()返回值为true,则他们的hashCode()也必须返回相同的int值</li>
-<li>如果两个对象equals()返回值为false,则他们的hashCode()返回值也必须不同<br>我们在定义类时，我们经常会希望两个不同对象的某些属性值相同时就认为他们相同，所以我们要重写equals()方法，按照原则，我们重写了equals()方法，也要重写hashCode()方法</li>
+<li><p>如果两个对象equals()返回值为false,则他们的hashCode()返回值也必须不同<br>我们在定义类时，我们经常会希望两个不同对象的某些属性值相同时就认为他们相同，所以我们要重写equals()方法，按照原则，我们重写了equals()方法，也要重写hashCode()方法</p>
+<h1 id="装饰模式"><a href="#装饰模式" class="headerlink" title="装饰模式"></a>装饰模式</h1><p>装饰(Decorator)模式又名包装(Wrapper)模式。装饰模式以对客户端透明的方式扩展对象的功能，是继承关系的一个替代方案。</p>
+<p>  装饰模式以对客户透明的方式动态地给一个对象附加上更多的责任。换言之，客户端并不会觉得对象在装饰前和装饰后有什么不同。装饰模式使用原来被装饰的类的一个子类的实例，把客户端的调用委派到被装饰类。关键在于这种扩展是完全透明的。与生成子类相比，它更具有灵活性。<br>在装饰模式中的各个角色有：</p>
+</li>
 </ul>
+<p>抽象构件（Component）角色：给出一个抽象接口，以规范准备接收附件责任的对象。<br>具体构件（Concrete Component）角色：定义一个要接收附加责任的类。<br>装饰（Decorator）角色：持有一个构件（Component）对象的实例，并定义一个与抽象构件接口一致的接口。<br>具体装饰（Concrete Decorator）角色：负责给构件对象“贴上”附加的责任。</p>
+<p>   Component为组件和装饰的公共父类，它定义了子类必须实现的方法。</p>
+<p>　　ConcreteComponent是一个具体的组件类，可以通过给它添加装饰来增加新的功能。</p>
+<p>　　Decorator是所有装饰的公共父类，它定义了所有装饰必须实现的方法，同时，它还保存了一个对于Component的引用，以便将用户的请求转发给Component，并可能在转发请求前后执行一些附加的动作。</p>
+<p>　　ConcreteDecorator1和ConcreteDecorator2是具体的装饰，可以使用它们来装饰具体的Component。</p>
 
       
     </div>
@@ -439,6 +447,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/04/git学习二/" rel="prev" title="git学习二">
+                git学习二 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -528,7 +540,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -539,7 +551,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -644,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Comparator和Comparable接口的区别"><span class="nav-number">1.</span> <span class="nav-text">Comparator和Comparable接口的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparable"><span class="nav-number">1.1.</span> <span class="nav-text">Comparable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparator"><span class="nav-number">1.2.</span> <span class="nav-text">Comparator</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在使用hashmap时为何要重写key的hashcode和equals方法"><span class="nav-number">2.</span> <span class="nav-text">在使用hashmap时为何要重写key的hashcode和equals方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Comparator和Comparable接口的区别"><span class="nav-number">1.</span> <span class="nav-text">Comparator和Comparable接口的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparable"><span class="nav-number">1.1.</span> <span class="nav-text">Comparable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparator"><span class="nav-number">1.2.</span> <span class="nav-text">Comparator</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在使用hashmap时为何要重写key的hashcode和equals方法"><span class="nav-number">2.</span> <span class="nav-text">在使用hashmap时为何要重写key的hashcode和equals方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#装饰模式"><span class="nav-number">3.</span> <span class="nav-text">装饰模式</span></a></li></ol></div>
             
 
           </div>
@@ -694,7 +706,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.4k字</span>
+  <span class="post-count">博客全站共19.5k字</span>
 </div>
 
 

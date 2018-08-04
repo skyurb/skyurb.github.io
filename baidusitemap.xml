@@ -4,8 +4,48 @@
 
     
   <url>
+    <loc>http://skyurb.cn/2018/08/04/git%E5%AD%A6%E4%B9%A0%E4%BA%8C/</loc>
+    <lastmod>2018-08-04T09:22:53.482Z</lastmod>
+    <data>
+        <display>
+        <title>git学习二</title>
+        <pubTime>2018-08-04T09:14:10.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://skyurb.cn/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://skyurb.cn/2018/07/23/git%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2018-08-04T09:17:49.321Z</lastmod>
+    <data>
+        <display>
+        <title>git学习</title>
+        <pubTime>2018-07-23T13:42:08.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://skyurb.cn/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://skyurb.cn/2018/08/03/java%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E4%B8%80/</loc>
-    <lastmod>2018-08-04T01:47:53.354Z</lastmod>
+    <lastmod>2018-08-04T03:00:09.085Z</lastmod>
     <data>
         <display>
         <title>java基础笔记整理一</title>
@@ -47,23 +87,6 @@
         <pubTime>2018-07-19T11:04:08.000Z</pubTime>
         
         <tag>java</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://skyurb.cn/2018/07/23/git%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2018-07-26T11:15:13.726Z</lastmod>
-    <data>
-        <display>
-        <title>git学习</title>
-        <pubTime>2018-07-23T13:42:08.000Z</pubTime>
-        
-        <tag>git</tag>
          
          
            
