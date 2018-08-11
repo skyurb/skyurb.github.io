@@ -97,7 +97,7 @@
 <meta property="og:description" content="简介 Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。   Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。   Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/c3a6dd62gy1ftnh7wdvmtj20cn05ajre.jpg">
-<meta property="og:updated_time" content="2018-08-04T09:17:49.321Z">
+<meta property="og:updated_time" content="2018-08-06T13:59:07.980Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git学习">
 <meta name="twitter:description" content="简介 Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。   Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。   Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。">
@@ -430,9 +430,8 @@
 </li>
 </ul>
 <p>现在我已经对read.txt文件做了三次修改了，那么我现在想查看下历史记录，可以使用命令 git log ：<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">   git log</span><br><span class="line"><span class="comment">//结果</span></span><br><span class="line">commit <span class="number">64</span>a95f6216fa491fcd0517764c18168c5db0725e (HEAD -&gt; master)</span><br><span class="line"><span class="symbol">Author:</span> skyurb <span class="params">&lt;<span class="number">2864814961</span>@qq.com&gt;</span></span><br><span class="line"><span class="symbol">Date:</span>   Sat Aug <span class="number">4</span> <span class="number">11</span>:<span class="number">37</span>:<span class="number">26</span> <span class="number">2018</span> +<span class="number">0800</span></span><br><span class="line"></span><br><span class="line">   read.txt提交增加world</span><br><span class="line"></span><br><span class="line">commit f4dd0e7e782c60948526fafbf1283c57c435b95d</span><br><span class="line"><span class="symbol">Author:</span> skyurb <span class="params">&lt;<span class="number">2864814961</span>@qq.com&gt;</span></span><br><span class="line"><span class="symbol">Date:</span>   Sat Aug <span class="number">4</span> <span class="number">11</span>:<span class="number">34</span>:<span class="number">34</span> <span class="number">2018</span> +<span class="number">0800</span></span><br><span class="line"></span><br><span class="line">   read.txt提交增加hello</span><br><span class="line"></span><br><span class="line">commit ba2c0c83e1930b0a16125d10ebed7fee2ce6ba02</span><br><span class="line"><span class="symbol">Author:</span> skyurb <span class="params">&lt;<span class="number">2864814961</span>@qq.com&gt;</span></span><br><span class="line"><span class="symbol">Date:</span>   Sat Aug <span class="number">4</span> <span class="number">11</span>:<span class="number">19</span>:<span class="number">45</span> <span class="number">2018</span> +<span class="number">0800</span></span><br><span class="line"></span><br><span class="line">   read.txt提交</span><br></pre></td></tr></table></figure></p>
-<p>git log命令显示从最近到最远的显示日志，我们可以看到最近三次提交记录，如果嫌上面显示的信息太多的话，我们可以使用命令 git log –pretty=oneline </p>
-<p>现在我想使用版本回退操作，我想把当前的版本回退到上一个版本，要使用什么命令呢？可以使用如下2种命令，第一种是：git reset  –hard HEAD^ 那么如果要回退到上上个版本只需把HEAD^ 改成 HEAD^^ 以此类推。那如果要回退到前100个版本的话，使用上面的方法肯定不方便，我们可以使用下面的简便命令操作：git reset  –hard HEAD~100 即可<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   git reset <span class="comment">--hard HEAD^</span></span><br><span class="line">  <span class="comment"> //结果</span></span><br><span class="line">   HEAD is now <span class="keyword">at</span> f4dd0e7 <span class="built_in">read</span>.txt提交增加hello</span><br><span class="line">cat <span class="built_in">read</span>.txt</span><br><span class="line">  <span class="comment"> //结果</span></span><br><span class="line">hello</span><br></pre></td></tr></table></figure></p>
-<p>我们再用cat查看就只剩hello了，增加的world内容我们看不到了，但是现在我想回退到最新的版本，如：有world的内容要如何恢复呢？我们可以通过版本号回退，使用命令方法如下：git reset  –hard 版本号 ，<br>但是现在的问题假如我已经关掉过一次命令行或者333内容的版本号我并不知道呢？要如何知道增加world内容的版本号呢？可以通过如下命令即可获取到版本号：git reflog  演示如下：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">git</span> <span class="selector-tag">reflog</span></span><br><span class="line">   <span class="comment">//结果</span></span><br><span class="line"><span class="selector-tag">f4dd0e7</span> (HEAD -&gt; master) <span class="selector-tag">HEAD</span><span class="variable">@&#123;0&#125;</span>: <span class="selector-tag">reset</span>: <span class="selector-tag">moving</span> <span class="selector-tag">to</span> <span class="selector-tag">HEAD</span>^</span><br><span class="line"><span class="selector-tag">64a95f6</span> <span class="selector-tag">HEAD</span><span class="variable">@&#123;1&#125;</span>: <span class="selector-tag">commit</span>: <span class="selector-tag">read</span><span class="selector-class">.txt</span>提交增加<span class="selector-tag">world</span></span><br><span class="line"><span class="selector-tag">f4dd0e7</span> (HEAD -&gt; master) <span class="selector-tag">HEAD</span><span class="variable">@&#123;2&#125;</span>: <span class="selector-tag">commit</span>: <span class="selector-tag">read</span><span class="selector-class">.txt</span>提交增加<span class="selector-tag">hello</span></span><br><span class="line"><span class="selector-tag">ba2c0c8</span> <span class="selector-tag">HEAD</span><span class="variable">@&#123;3&#125;</span>: <span class="selector-tag">commit</span> (initial): <span class="selector-tag">read</span><span class="selector-class">.txt</span>提交</span><br></pre></td></tr></table></figure></p>
+<p>git log命令显示从最近到最远的显示日志，我们可以看到最近三次提交记录，如果嫌上面显示的信息太多的话，我们可以使用命令 <code>git log –pretty=oneline</code><br>现在我想使用版本回退操作，我想把当前的版本回退到上一个版本，要使用什么命令呢？可以使用如下2种命令，第一种是：<code>git reset  --hard HEAD^</code> 那么如果要回退到上上个版本只需把HEAD^ 改成 HEAD^^ 以此类推。那如果要回退到前100个版本的话，使用上面的方法肯定不方便，我们可以使用下面的简便命令操作：<code>git reset  --hard HEAD~100</code> 即可<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   git <span class="keyword">reset</span> - -hard <span class="keyword">HEAD</span>^</span><br><span class="line">   //结果</span><br><span class="line">   <span class="keyword">HEAD</span> <span class="keyword">is</span> <span class="keyword">now</span> <span class="keyword">at</span> f4dd0e7 read.txt提交增加hello</span><br><span class="line">cat read.txt</span><br><span class="line">   //结果</span><br><span class="line">hello</span><br></pre></td></tr></table></figure></p>
+<p>我们再用cat查看就只剩hello了，增加的world内容我们看不到了，但是现在我想回退到最新的版本，如：有world的内容要如何恢复呢？我们可以通过版本号回退，使用命令方法如下：<code>git reset  --hard</code> 版本号 ，<br>但是现在的问题假如我已经关掉过一次命令行或者333内容的版本号我并不知道呢？要如何知道增加world内容的版本号呢？可以通过如下命令即可获取到版本号：git reflog  演示如下：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">git</span> <span class="selector-tag">reflog</span></span><br><span class="line">   <span class="comment">//结果</span></span><br><span class="line"><span class="selector-tag">f4dd0e7</span> (HEAD -&gt; master) <span class="selector-tag">HEAD</span><span class="variable">@&#123;0&#125;</span>: <span class="selector-tag">reset</span>: <span class="selector-tag">moving</span> <span class="selector-tag">to</span> <span class="selector-tag">HEAD</span>^</span><br><span class="line"><span class="selector-tag">64a95f6</span> <span class="selector-tag">HEAD</span><span class="variable">@&#123;1&#125;</span>: <span class="selector-tag">commit</span>: <span class="selector-tag">read</span><span class="selector-class">.txt</span>提交增加<span class="selector-tag">world</span></span><br><span class="line"><span class="selector-tag">f4dd0e7</span> (HEAD -&gt; master) <span class="selector-tag">HEAD</span><span class="variable">@&#123;2&#125;</span>: <span class="selector-tag">commit</span>: <span class="selector-tag">read</span><span class="selector-class">.txt</span>提交增加<span class="selector-tag">hello</span></span><br><span class="line"><span class="selector-tag">ba2c0c8</span> <span class="selector-tag">HEAD</span><span class="variable">@&#123;3&#125;</span>: <span class="selector-tag">commit</span> (initial): <span class="selector-tag">read</span><span class="selector-class">.txt</span>提交</span><br></pre></td></tr></table></figure></p>
 <p>通过上面的显示我们可以知道，增加内容world的版本号是 64a95f6.我们现在可以命令git reset  –hard 64a95f6来恢复了<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">reset</span>  <span class="comment">--hard 64a95f6</span></span><br><span class="line"><span class="keyword">HEAD</span> <span class="keyword">is</span> <span class="keyword">now</span> <span class="keyword">at</span> <span class="number">64</span>a95f6 read.txt提交增加world</span><br></pre></td></tr></table></figure></p>
 <p>这时，又恢复到原来有world的版本</p>
 <h3 id="理解工作区与暂存区的区别"><a href="#理解工作区与暂存区的区别" class="headerlink" title="理解工作区与暂存区的区别"></a>理解工作区与暂存区的区别</h3><ul>
@@ -451,7 +450,7 @@
 </li>
 </ul>
 <p>可以发现，Git会告诉你，git checkout  – file 可以丢弃工作区的修改<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- read.txt</span><br><span class="line">cat read.txt</span><br><span class="line">hello</span><br><span class="line">world</span><br></pre></td></tr></table></figure></p>
-<p>发现后面的内容就没有了，命令 git checkout –read.txt 意思就是，把read.txt文件在工作区做的修改全部撤销，这里有2种情况</p>
+<p>发现后面的内容就没有了，命令 git checkout – read.txt 意思就是，把read.txt文件在工作区做的修改全部撤销，这里有2种情况</p>
 <ul>
 <li><p>read.txt自动修改后，还没有放到暂存区，使用 撤销修改就回到和版本库一模一样的状态。</p>
 </li>
@@ -617,7 +616,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -628,7 +627,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -639,7 +638,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -783,7 +782,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共19.5k字</span>
+  <span class="post-count">博客全站共23.1k字</span>
 </div>
 
 

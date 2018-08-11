@@ -97,7 +97,7 @@
 <meta property="og:description" content="分支管理在版本回填退里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。 创建与合并分支首先，我们来创建dev分支，然后切换到dev分支上git checkout -b devg">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/c3a6dd62gy1ftnh7wdvmtj20cn05ajre.jpg">
-<meta property="og:updated_time" content="2018-08-04T09:22:53.482Z">
+<meta property="og:updated_time" content="2018-08-06T14:18:14.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git学习二">
 <meta name="twitter:description" content="分支管理在版本回填退里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。 创建与合并分支首先，我们来创建dev分支，然后切换到dev分支上git checkout -b devg">
@@ -410,7 +410,20 @@
 <blockquote>
 <p>删除分支：git branch –d name</p>
 </blockquote>
-<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2>
+<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>先新建一个新分支，比如名字叫fenzhi1，在read.txt添加一行内容byby，然后提交<br>我们现在切换到master分支上来，也在最后一行添加内容，内容为byby<br>现在我们需要在master分支上来合并fenzhi1：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	$ git <span class="built_in">merge</span> fenzhi1</span><br><span class="line"><span class="comment">	//结果</span></span><br><span class="line">Auto-merging <span class="built_in">read</span>.txt</span><br><span class="line"> (content): Merge conflict <span class="keyword">in</span> <span class="built_in">read</span>.txt</span><br><span class="line">Automatic <span class="built_in">merge</span> failed; fix conflicts <span class="keyword">and</span> <span class="keyword">then</span> commit <span class="keyword">the</span> <span class="built_in">result</span>.</span><br></pre></td></tr></table></figure></p>
+<p>Git用&lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;标记出不同分支的内容，其中&lt;&lt;&lt;HEAD是指主分支修改的内容，&gt;&gt;&gt;&gt;&gt;fenzhi1 是指fenzhi1上修改的内容<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="code"> cat read.txt</span></span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">hello world;</span><br><span class="line">baby</span><br><span class="line">=======</span><br><span class="line">hello word</span><br><span class="line">hahhaha</span><br><span class="line">i am jack</span><br><span class="line">let's go;</span><br><span class="line">babay</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; fenzhi1</span><br></pre></td></tr></table></figure></p>
+<p>我们可以修改下和主干一样后保存。</p>
+<h2 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h2><p>通常合并分支时，git一般使用”Fast forward”模式，在这种模式下，删除分支后，会丢掉分支信息，现在我们来使用带参数 –no-ff来禁用”Fast forward”模式。首先我们来做demo演示下：</p>
+<ul>
+<li>创建一个dev分支。</li>
+<li>修改readme.txt内容。</li>
+<li>添加到暂存区。</li>
+<li>切换回主分支(master)。</li>
+<li>合并dev分支，使用命令 git merge –no-ff  -m “注释” dev</li>
+<li>查看历史记录</li>
+</ul>
+<p>分支策略：首先master主分支应该是非常稳定的，也就是用来发布新版本，一般情况下不允许在上面干活，干活一般情况下在新建的dev分支上干活，干完后，比如上要发布，或者说dev分支代码稳定后可以合并到主分支master上来。</p>
+
       
     </div>
     
@@ -455,6 +468,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/11/反射/" rel="prev" title="反射">
+                反射 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -544,7 +561,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -555,7 +572,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -566,7 +583,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -660,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分支管理"><span class="nav-number">1.</span> <span class="nav-text">分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">1.1.</span> <span class="nav-text">创建与合并分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.2.</span> <span class="nav-text">解决冲突</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分支管理"><span class="nav-number">1.</span> <span class="nav-text">分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">1.1.</span> <span class="nav-text">创建与合并分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.2.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理策略"><span class="nav-number">1.3.</span> <span class="nav-text">分支管理策略</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -710,7 +727,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共19.5k字</span>
+  <span class="post-count">博客全站共23.1k字</span>
 </div>
 
 

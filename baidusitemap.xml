@@ -3,10 +3,49 @@
 
 
     
+  <url>
+    <loc>http://skyurb.cn/2018/08/11/mysql%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2018-08-11T04:45:55.992Z</lastmod>
+    <data>
+        <display>
+        <title>mysql基础</title>
+        <pubTime>2018-08-11T03:02:10.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="MYSQL" url="http://skyurb.cn/categories/MYSQL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://skyurb.cn/2018/08/11/%E5%8F%8D%E5%B0%84/</loc>
+    <lastmod>2018-08-11T02:59:23.943Z</lastmod>
+    <data>
+        <display>
+        <title>反射</title>
+        <pubTime>2018-08-11T01:13:56.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA" url="http://skyurb.cn/categories/JAVA/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://skyurb.cn/2018/08/04/git%E5%AD%A6%E4%B9%A0%E4%BA%8C/</loc>
-    <lastmod>2018-08-04T09:22:53.482Z</lastmod>
+    <lastmod>2018-08-06T14:18:14.371Z</lastmod>
     <data>
         <display>
         <title>git学习二</title>
@@ -26,7 +65,7 @@
     
   <url>
     <loc>http://skyurb.cn/2018/07/23/git%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2018-08-04T09:17:49.321Z</lastmod>
+    <lastmod>2018-08-06T13:59:07.980Z</lastmod>
     <data>
         <display>
         <title>git学习</title>
@@ -43,6 +82,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://skyurb.cn/2018/08/03/java%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E4%B8%80/</loc>
